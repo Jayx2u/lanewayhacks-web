@@ -16,7 +16,7 @@ export default function BackgroundBeamsDemo() {
         />
         </div>
         <p className="text-neutral-400 max-w-lg mx-auto my-2 text-sm md:text-lg text-center relative z-10 mb-10">
-          In Q3 2025, we will be hosting Melbourne's largest hackathon for high school students: Laneway Hacks 2025! Student participants will embark on an exhilarating 8-hour journey to create original projects that push the boundaries of their technical skills and creativity.
+          In Q3 2025, we will be hosting Melbourne&apos;s largest hackathon for high school students: Laneway Hacks 2025! Student participants will embark on an exhilarating 8-hour journey to create original projects that push the boundaries of their technical skills and creativity.
         </p>
         <div className="flex items-center justify-center w-full gap-2 relative z-10">
           <input
