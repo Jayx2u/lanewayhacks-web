@@ -18,7 +18,7 @@ const unbounded = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LanewayHacks",
+  title: "Laneway Hacks",
   description: "Soon",
 };
 
