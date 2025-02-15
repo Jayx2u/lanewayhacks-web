@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
   	extend: {
+			// COLOUR SCHEME
+			colors: {
+        'hack-purple': '#281c30',
+      },
 			// SHINY BUTTON
 			animation: {
 				shimmer: "shimmer 2s linear infinite",
@@ -76,4 +80,3 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-
