@@ -1,8 +1,8 @@
 "use client"
 import { BackgroundBeams } from "@/src/components/ui/background-beams"
 import Image from 'next/image'
-import { motion } from "framer-motion"
-import { FaStar } from "react-icons/fa"
+// import { motion } from "framer-motion"
+// import { FaStar } from "react-icons/fa"
 
 export default function Home() {
 
