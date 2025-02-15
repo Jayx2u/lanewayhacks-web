@@ -4,11 +4,10 @@ import Image from 'next/image'
 import { motion } from "framer-motion"
 import { FaStar } from "react-icons/fa"
 
-export default function BackgroundBeamsDemo() {
-  const patternText = "HACKATHON";
+export default function Home() {
 
   return (
-    <div className="h-screen w-full bg-[#281c30] relative flex flex-col items-end justify-start antialiased p-4 text-unbounded">
+    <div className="h-screen w-full bg-[#281c30] relative flex flex-col items-end justify-start antialiased p-12 text-unbounded">
       <div className="relative z-10 text-lg md:text-7xl p-4">
         <Image
           src="/lanewayhacks-logo.png"
@@ -23,53 +22,11 @@ export default function BackgroundBeamsDemo() {
       </p>
 
       {/* Vertical Text Pattern */}
-      <div className="fixed right-8 top-0 h-screen overflow-hidden pointer-events-none z-20">
-        <motion.div
-          className="absolute right-0 h-full text-[#D9D5EE] opacity-20 whitespace-nowrap tracking-widest font-bold flex flex-col items-center justify-start"
-          style={{ writingMode: 'vertical-rl' }}
-          initial={{ y: "-100%" }}
-          animate={{
-            y: "100%"
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 20,
-            ease: "linear",
-          }}
-        >
-          {Array.from({ length: 30 }, (_, i) => (
-            <div key={i} className="flex items-center gap-2 my-2">
-              {patternText}
-              <FaStar className="rotate-90" size={12} />
-            </div>
-          ))}
-        </motion.div>
+      <div className="fixed right-4 top-0 h-full flex items-center justify-center writing-mode-vertical z-20">
+        <div className="transform rotate-180 whitespace-nowrap tracking-widest text-[#C5B5D9] opacity-80 text-lg font-thin" style={{ writingMode: 'vertical-rl' }}>
+          HACKATHON • HACKATHON • HACKATHON • HACKATHON • HACKATHON • HACKATHON • HACKATHON • HACKATHON • HACKATHON • HACKATHON • HACKATHON • HACKATHON • HACKATHON
+        </div>
       </div>
-
-      {/* Second one justttt in case */}
-      <div className="fixed right-8 top-0 h-screen overflow-hidden pointer-events-none z-20">
-        <motion.div
-          className="absolute right-0 h-full text-[#D9D5EE] opacity-20 whitespace-nowrap tracking-widest font-unbounded flex flex-col items-center justify-start"
-          style={{ writingMode: 'vertical-rl' }}
-          initial={{ y: "0%" }}
-          animate={{
-            y: "300%"
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 20,
-            ease: "linear",
-          }}
-        >
-          {Array.from({ length: 30 }, (_, i) => (
-            <div key={i} className="flex items-center gap-2 my-2">
-              {patternText}
-              <FaStar className="rotate-90" size={12} />
-            </div>
-          ))}
-        </motion.div>
-      </div>
-
       <BackgroundBeams />
     </div>
   )
