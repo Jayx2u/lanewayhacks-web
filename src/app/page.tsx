@@ -10,7 +10,7 @@ export default function Home() {
     <div className="h-screen w-full bg-[#281c30] relative flex flex-col items-end justify-start antialiased p-12 text-unbounded">
       <div className="relative z-10 text-lg md:text-7xl p-2">
         <Image
-          src="/lanewayhacks-logo.png"
+          src="/laneway-logo.png"
           alt="LanewayHacks"
           className="relative z-10 text-lg md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-right font-sans font-bold"
           width={700}
