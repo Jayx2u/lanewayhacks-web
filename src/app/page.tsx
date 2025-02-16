@@ -2,6 +2,7 @@
 import { BackgroundBeams } from "@/src/components/ui/background-beams"
 import EmailSignup from '@/src/components/ui/input'
 import Image from 'next/image'
+import { Analytics } from "@vercel/analytics/react"
 import { PiStarFourFill } from "react-icons/pi";
 
 export default function Home() {
@@ -50,6 +51,7 @@ export default function Home() {
         </div>
       </div>
       <BackgroundBeams />
+      <Analytics/>
     </div>
   )
 }
