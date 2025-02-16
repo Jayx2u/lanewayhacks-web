@@ -18,7 +18,7 @@ export default function Home() {
           height={700}
         />
       </div>
-      <div className="relative z-10 text-center md:text-right pr-8">
+      <div className="relative z-10 text-right pr-8">
         <hr className="border-t-2 border-[#C5B5D9] my-4" />
         <p className="text-[#D9D5EE] max-w-2xl my-2 text-lg md:text-xl pl-0 md:pl-4 font-unbounded">
           We will be hosting Melbourne&apos;s largest hackathon for high school students: Laneway Hacks 2025! Student participants will embark on an exhilarating 8-hour journey to create original projects that push the boundaries of their technical skills and creativity.
@@ -27,16 +27,17 @@ export default function Home() {
         <div className="text-[#B791FF] text-lg md:text-ml font-unbounded font-black">
           REGISTER YOUR INTEREST
         </div>
-        <div className="flex justify-center md:justify-end font-unbounded">
+        <div className="flex justify-end md:justify-end font-unbounded">
           <EmailSignup />
         </div>
       </div>
 
       {/* Bottom Left Text */}
-      <div className="relative md:absolute bottom-8 left-0 md:left-8 flex flex-col z-10 font-unbounded text-left mt-16 pt-8 px-8 md:px-0">
-        <div className="text-[#B791FF] text-4xl md:text-6xl font-bold flex items-center gap-2">
-          <span>Q3 2025</span> <PiStarFourFill />
-        </div>
+      <div className="relative md:absolute justify-end bottom-8 left-0 md:left-8 flex flex-col z-10 font-unbounded text-right md:text-left mt-16 pt-8 px-8 md:px-0">
+        <div className="text-[#B791FF] text-4xl md:text-6xl font-bold flex items-center md:gap-2 w-full justify-end md:justify-start">
+  <span className="order-2 md:order-1">Q3 2025</span>
+  <PiStarFourFill className="order-1 md:order-2 mr-2"/>
+</div>
         <div className="text-[#D9D5EE] text-lg md:text-xl font-medium mt-2">
           MELBOURNE CBD, AUSTRALIA
         </div>
