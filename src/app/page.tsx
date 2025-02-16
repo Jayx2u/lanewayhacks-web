@@ -33,7 +33,7 @@ export default function Home() {
       </div>
 
       {/* Bottom Left Text */}
-      <div className="absolute bottom-8 left-8 flex flex-col z-10 font-unbounded text-left">
+      <div className="relative md:absolute bottom-8 left-0 md:left-8 flex flex-col z-10 font-unbounded text-left mt-16 pt-8 px-8 md:px-0">
         <div className="text-[#B791FF] text-4xl md:text-6xl font-bold flex items-center gap-2">
           <span>Q3 2025</span> <PiStarFourFill />
         </div>
