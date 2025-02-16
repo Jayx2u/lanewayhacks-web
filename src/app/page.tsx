@@ -35,9 +35,9 @@ export default function Home() {
       {/* Bottom Left Text */}
       <div className="relative md:absolute justify-end bottom-8 left-0 md:left-8 flex flex-col z-10 font-unbounded text-right md:text-left mt-16 pt-8 px-8 md:px-0">
         <div className="text-[#B791FF] text-4xl md:text-6xl font-bold flex items-center md:gap-2 w-full justify-end md:justify-start">
-  <span className="order-2 md:order-1">Q3 2025</span>
-  <PiStarFourFill className="order-1 md:order-2 mr-2"/>
-</div>
+        <span className="order-2 md:order-1">Q3 2025</span>
+        <PiStarFourFill className="order-1 md:order-2 mr-2"/>
+      </div>
         <div className="text-[#D9D5EE] text-lg md:text-xl font-medium mt-2">
           MELBOURNE CBD, AUSTRALIA
         </div>
