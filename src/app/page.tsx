@@ -25,6 +25,7 @@ export default function Home() {
             className="relative z-10 text-lg md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 font-sans font-bold"
             width={700}
             height={700}
+            priority
           />
         </motion.div>
 
