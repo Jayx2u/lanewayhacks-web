@@ -18,12 +18,13 @@ const PageTransition = ({ children }: PageTransitionProps) => {
   }, []);
 
   return (
-     <div className="relative">
+      <div className="relative">
       <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut", delay: 1.5 }}
         className="fixed inset-0 flex items-center justify-center bg-[#281c30] z-50"
+        style={{ pointerEvents: isLoading ? 'auto' : 'none' }}
       >
         <Image
           src="/laneway-logo.png"
@@ -31,6 +32,7 @@ const PageTransition = ({ children }: PageTransitionProps) => {
           width={400}
           height={400}
           priority
+          draggable={false}
         />
       </motion.div>
 
@@ -42,6 +44,7 @@ const PageTransition = ({ children }: PageTransitionProps) => {
         }}
         onAnimationComplete={() => document.body.style.overflow = "auto"}
         className="will-change-opacity"
+        style={{ pointerEvents: isLoading ? 'none' : 'auto' }}
       >
         {!isLoading && children}
       </motion.div>
