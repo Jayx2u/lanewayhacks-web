@@ -9,6 +9,9 @@ import PageTransition from "@/src/components/animations/page-transition"
 import MaskedText from "@/src/components/animations/masked-text"
 import EmailSignup from '@/src/components/ui/input'
 
+// TODO: Fix vertical scroll animations not showing up on mobile
+// TODO: Fix text loading at bottom causing a sudden jump in position upon loading.
+
 export default function Home() {
   return (
     <PageTransition>
@@ -76,7 +79,7 @@ export default function Home() {
           </div>
           <MaskedText
             text="MELBOURNE CBD, AUSTRALIA"
-            className="text-[#D9D5EE] text-lg md:text-xl font-medium mt-2"
+            className="text-[#D9D5EE] text-lg md:text-xl font-medium mt-2 mb-8"
           />
         </div>
 
