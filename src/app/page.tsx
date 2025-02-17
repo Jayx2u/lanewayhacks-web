@@ -1,9 +1,13 @@
 "use client"
-import { BackgroundBeams } from "@/src/components/ui/background-beams"
-import EmailSignup from '@/src/components/ui/input'
 import Image from 'next/image'
 import { Analytics } from "@vercel/analytics/react"
+
 import { PiStarFourFill } from "react-icons/pi";
+
+import { BackgroundBeams } from "@/src/components/ui/background-beams"
+import VerticalScroll from "@/src/components/ui/vertical-inf-text-scroll"
+
+import EmailSignup from '@/src/components/ui/input'
 
 export default function Home() {
 
@@ -45,11 +49,12 @@ export default function Home() {
 
       {/* Vertical Text Pattern */}
       <div className="fixed right-4 top-0 h-full flex items-center justify-center writing-mode-vertical z-20">
-        <div className="transform rotate-180 whitespace-nowrap tracking-widest text-[#C5B5D9] opacity-80 text-lg font-thin" style={{ writingMode: 'vertical-rl' }}>
+        {/*<div className="transform rotate-180 whitespace-nowrap tracking-widest text-[#C5B5D9] opacity-80 text-lg font-thin" style={{ writingMode: 'vertical-rl' }}>
           <span className="flex flex-row items-center gap-2">
             HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON
           </span>
-        </div>
+        </div>*/}
+        <VerticalScroll />
       </div>
       <BackgroundBeams />
       <Analytics/>

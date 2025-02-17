@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Unbounded } from "next/font/google";
 import "./globals.css";
 
+// TODO: ADD FOOTER HERE EVENTUALLY
+
 const unbounded = Unbounded({
   variable: "--font-unbounded",
   subsets: ["latin"],
