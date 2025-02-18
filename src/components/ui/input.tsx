@@ -21,7 +21,7 @@ const EmailSignup = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md mt-2 relative z-10">
+      <form onSubmit={handleSubmit} className="w-full max-w-lg ml-auto mt-2 relative z-10">
       <div className="flex flex-col sm:flex-row gap-4">
         <input
           type="email"
