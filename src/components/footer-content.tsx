@@ -55,7 +55,7 @@ const Nav = () => {
 const Socials = () => {
   return (
     <div className='mt-8 md:mt-0'>
-      <MaskedText text="Connect" className='mb-4 uppercase text-[#B791FF] text-right'/>
+      <MaskedText text="Connect" className='mb-4 uppercase text-[#B791FF] md:text-right text-left'/>
       <div className='flex gap-4'>
         <SocialLink href="https://github.com/lanewayhacks" icon={<FaGithub size={24}/>}/>
         <SocialLink href="https://twitter.com/lanewayhacks" icon={<FaTwitter size={24}/>}/>
