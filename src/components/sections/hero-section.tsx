@@ -66,7 +66,7 @@ export default function HeroSection() {
         >
           <MaskedText
             text="JOIN THE CONVERSATION"
-            className="text-[#B791FF] text-base md:text-lg font-unbounded font-black mb-2"
+            className="text-[#B791FF] text-base md:text-lg font-unbounded font-black mb-4"
           />
           <a
             href="https://discord.gg/"
