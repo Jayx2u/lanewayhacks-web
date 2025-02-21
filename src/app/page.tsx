@@ -1,99 +1,133 @@
 "use client"
-import Image from 'next/image'
 import { Analytics } from "@vercel/analytics/react"
-import { PiStarFourFill } from "react-icons/pi"
 import { motion } from "framer-motion"
-import { BackgroundBeams } from "@/src/components/animations/background-beams"
-import VerticalScroll from "@/src/components/animations/vertical-inf-text-scroll"
 import PageTransition from "@/src/components/animations/page-transition"
-import MaskedText from "@/src/components/animations/masked-text"
-import EmailSignup from '@/src/components/ui/input'
+import HeroSection from "@/src/components/sections/hero-section"
+import StickyFooter from "@/src/components/sections/sticky-footer"
 
-// TODO: Fix vertical scroll animations not showing up on mobile
-// TODO: Fix text loading at bottom causing a sudden jump in position upon loading.
+const sectionVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1 }
+}
 
 export default function Home() {
   return (
     <PageTransition>
-      <div className="h-screen w-full bg-[#281c30] relative flex flex-col items-end justify-start antialiased p-8 md:p-12 text-unbounded">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+      <main className="relative">
+        <HeroSection />
+
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={sectionVariants}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative z-10 text-lg md:text-7xl p-2 text-right"
+          className="min-h-screen bg-[#362741] py-20"
         >
-          <Image
-            src="/laneway-logo.png"
-            alt="LanewayHacks"
-            className="relative z-10 text-lg md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 font-sans font-bold"
-            width={700}
-            height={700}
-            priority
-          />
-        </motion.div>
-
-        <div className="relative z-10 text-right pr-8">
-          <motion.hr
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="border-t-2 border-[#C5B5D9] my-4"
-          />
-          <MaskedText
-            text="We will be hosting Melbourne's largest hackathon for high school students: Laneway Hacks 2025! Student participants will embark on an exhilarating 8-hour journey to create original projects that push the boundaries of their technical skills and creativity."
-            className="text-[#D9D5EE] max-w-2xl my-2 text-lg md:text-xl pl-0 md:pl-4 font-unbounded"
-          />
-          <motion.hr
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="border-t-2 border-[#C5B5D9] my-4"
-          />
-          <MaskedText
-            text="REGISTER YOUR INTEREST"
-            className="text-[#B791FF] text-lg md:text-ml font-unbounded font-black"
-          />
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex justify-end md:justify-end font-unbounded"
-          >
-            <EmailSignup />
-          </motion.div>
-        </div>
-
-        <div className="relative md:absolute justify-end bottom-8 left-0 md:left-8 flex flex-col z-10 font-unbounded text-right md:text-left mt-16 pt-8 px-8 md:px-0">
-          <div className="text-[#B791FF] text-4xl md:text-6xl font-bold flex items-center md:gap-2 w-full justify-end md:justify-start">
-            <MaskedText
-              text="Q3 2025"
-              className="order-2 md:order-1"
-            />
-            <motion.div
-              initial={{ rotate: -180, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1 }}
+          <div className="container mx-auto px-4">
+            <motion.h2
+              variants={sectionVariants}
+              className="text-4xl md:text-5xl font-bold mb-8 text-[#D9D5EE]"
             >
-              <PiStarFourFill className="order-1 md:order-2 mr-2"/>
-            </motion.div>
+              What is LanewayHacks?
+            </motion.h2>
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              {whatIsContent.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={cardVariants}
+                  transition={{ duration: 0.8, delay: 0.4 + index * 0.2 }}
+                  className="p-6 rounded-lg bg-[#281c30] border border-[#5B447A]"
+                >
+                  <h3 className="text-xl font-semibold mb-3 text-[#B791FF]">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#D9D5EE]">
+                    {item.content}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-          <MaskedText
-            text="MELBOURNE CBD, AUSTRALIA"
-            className="text-[#D9D5EE] text-lg md:text-xl font-medium mt-2 mb-8"
-          />
-        </div>
+        </motion.section>
 
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="fixed right-4 top-0 h-full flex items-center justify-center writing-mode-vertical z-20"
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={sectionVariants}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="min-h-screen bg-[#281c30] py-20"
         >
-          <VerticalScroll />
-        </motion.div>
-        <BackgroundBeams />
-        <Analytics/>
-      </div>
+          <div className="container mx-auto px-4">
+            <motion.h2
+              variants={sectionVariants}
+              className="text-4xl md:text-5xl font-bold mb-8 text-[#D9D5EE]"
+            >
+              Why Participate?
+            </motion.h2>
+            <div className="grid md:grid-cols-2 gap-12 mt-12">
+              {whyParticipateContent.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={cardVariants}
+                  transition={{ duration: 0.8, delay: 0.4 + index * 0.2 }}
+                  className="p-6 rounded-lg bg-[#362741] border border-[#5B447A]"
+                >
+                  <h3 className="text-xl font-semibold mb-3 text-[#B791FF]">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#D9D5EE]">
+                    {item.content}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.section>
+
+        <StickyFooter />
+        <Analytics />
+      </main>
     </PageTransition>
   )
 }
+
+const whatIsContent = [
+  {
+    title: "8-Hour Challenge",
+    content: "An intensive hackathon where high school students collaborate, code, and create innovative solutions in just 8 hours. Perfect for both beginners and experienced coders."
+  },
+  {
+    title: "Melbourne's Largest",
+    content: "Join the biggest high school hackathon in Melbourne, bringing together young minds from across the city. Experience the vibrant tech community in the heart of CBD."
+  },
+  {
+    title: "Tech & Creativity",
+    content: "Push the boundaries of technical skills while fostering creativity in problem-solving. Work with modern tools and technologies to bring your ideas to life."
+  }
+];
+
+const whyParticipateContent = [
+  {
+    title: "Learn & Grow",
+    content: "Gain hands-on experience with new technologies and develop valuable problem-solving skills. Get mentorship from industry professionals and learn best practices."
+  },
+  {
+    title: "Network",
+    content: "Connect with like-minded students and industry mentors from Melbourne's tech community. Build relationships that extend beyond the hackathon."
+  },
+  {
+    title: "Win Prizes",
+    content: "Compete for exciting prizes and recognition for your innovative solutions. Show off your creativity and technical skills to win awards across various categories."
+  },
+  {
+    title: "Build Portfolio",
+    content: "Create projects that showcase your skills and creativity to future opportunities. Add real-world project experience to your resume and academic portfolio."
+  }
+];
