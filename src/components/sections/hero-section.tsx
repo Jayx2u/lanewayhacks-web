@@ -1,92 +1,95 @@
 "use client"
 import Image from 'next/image'
-import { motion } from "framer-motion"
-import { PiStarFourFill } from "react-icons/pi"
-import { BackgroundBeams } from "@/src/components/animations/background-beams"
+import {motion} from "framer-motion"
+import {PiStarFourFill} from "react-icons/pi"
+import {BackgroundBeams} from "@/src/components/animations/background-beams"
 import VerticalScroll from "@/src/components/animations/vertical-inf-text-scroll"
 import MaskedText from "@/src/components/animations/masked-text"
 import EmailSignup from '@/src/components/ui/input'
 
 export default function HeroSection() {
   return (
-    <div className="min-h-screen w-full bg-[#281c30] relative flex flex-col items-end justify-start antialiased p-8 pr-16 text-unbounded overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative z-10 w-full max-w-[700px] mt-4 md:mt-8"
-        >
-          <Image
-            src="/laneway-logo.png"
-            alt="LanewayHacks"
-            className="w-full h-auto"
-            width={700}
-            height={700}
-            priority
-            draggable={false}
-          />
-        </motion.div>
+    <div
+      className="min-h-screen w-full bg-[#281c30] relative flex flex-col items-end justify-start antialiased p-8 pr-16 text-unbounded overflow-hidden">
+      <motion.div
+        initial={{opacity: 0, y: 20}}
+        animate={{opacity: 1, y: 0}}
+        transition={{duration: 0.8, delay: 0.2}}
+        className="relative z-10 w-full max-w-[700px] mt-4 md:mt-8"
+      >
+        <Image
+          src="/laneway-logo.png"
+          alt="LanewayHacks"
+          className="w-full h-auto"
+          width={700}
+          height={700}
+          priority
+          draggable={false}
+        />
+      </motion.div>
 
-        <div className="relative z-10 text-right w-full max-w-2xl pr-4 md:pr-8">
-          <motion.hr
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="border-t-2 border-[#C5B5D9] my-4"
-          />
+      <div className="relative z-10 text-right w-full max-w-2xl pr-4 md:pr-8">
+        <motion.hr
+          initial={{scaleX: 0}}
+          animate={{scaleX: 1}}
+          transition={{duration: 0.8, delay: 0.4}}
+          className="border-t-2 border-[#C5B5D9] my-4"
+        />
+        <MaskedText
+          text="We will be hosting Melbourne's largest hackathon for high school students: Laneway Hacks 2025! Student participants will embark on an exhilarating 8-hour journey to create original projects that push the boundaries of their technical skills and creativity."
+          className="text-[#D9D5EE] my-2 text-base md:text-lg lg:text-xl pl-0 md:pl-4 font-unbounded"
+        />
+        <motion.hr
+          initial={{scaleX: 0}}
+          animate={{scaleX: 1}}
+          transition={{duration: 0.8, delay: 0.6}}
+          className="border-t-2 border-[#C5B5D9] my-4"
+        />
+        <MaskedText
+          text="REGISTER YOUR INTEREST"
+          className="text-[#B791FF] text-base md:text-lg font-unbounded font-black"
+        />
+        <motion.div
+          initial={{opacity: 0, y: 20}}
+          animate={{opacity: 1, y: 0}}
+          transition={{duration: 0.8, delay: 0.8}}
+          className="flex justify-end md:justify-end font-unbounded my-4"
+        >
+          <EmailSignup/>
+        </motion.div>
+      </div>
+
+      <div
+        className="relative w-full md:absolute md:bottom-8 md:left-8 flex flex-col z-10 font-unbounded text-right md:text-left mt-16 pt-8 px-4 md:px-0">
+        <div
+          className="text-[#B791FF] text-3xl md:text-4xl lg:text-6xl font-bold flex items-center gap-2 w-full justify-end md:justify-start">
           <MaskedText
-            text="We will be hosting Melbourne's largest hackathon for high school students: Laneway Hacks 2025! Student participants will embark on an exhilarating 8-hour journey to create original projects that push the boundaries of their technical skills and creativity."
-            className="text-[#D9D5EE] my-2 text-base md:text-lg lg:text-xl pl-0 md:pl-4 font-unbounded"
-          />
-          <motion.hr
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="border-t-2 border-[#C5B5D9] my-4"
-          />
-          <MaskedText
-            text="REGISTER YOUR INTEREST"
-            className="text-[#B791FF] text-base md:text-lg font-unbounded font-black"
+            text="Q3 2025"
+            className="order-2 md:order-1"
           />
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex justify-end md:justify-end font-unbounded my-4"
+            initial={{rotate: -180, opacity: 0}}
+            animate={{rotate: 0, opacity: 1}}
+            transition={{duration: 0.8, delay: 1}}
           >
-            <EmailSignup />
+            <PiStarFourFill className="order-1 md:order-2"/>
           </motion.div>
         </div>
+        <MaskedText
+          text="MELBOURNE CBD, AUSTRALIA"
+          className="text-[#D9D5EE] text-base md:text-lg lg:text-xl font-medium mt-2"
+        />
+      </div>
 
-        <div className="relative w-full md:absolute md:bottom-8 md:left-8 flex flex-col z-10 font-unbounded text-right md:text-left mt-16 pt-8 px-4 md:px-0">
-          <div className="text-[#B791FF] text-3xl md:text-4xl lg:text-6xl font-bold flex items-center gap-2 w-full justify-end md:justify-start">
-            <MaskedText
-              text="Q3 2025"
-              className="order-2 md:order-1"
-            />
-            <motion.div
-              initial={{ rotate: -180, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1 }}
-            >
-              <PiStarFourFill className="order-1 md:order-2"/>
-            </motion.div>
-          </div>
-          <MaskedText
-            text="MELBOURNE CBD, AUSTRALIA"
-            className="text-[#D9D5EE] text-base md:text-lg lg:text-xl font-medium mt-2"
-          />
-        </div>
-
-        <motion.div
-  initial={{ opacity: 0, x: 20 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.8, delay: 1.2 }}
-  className="absolute right-4 top-0 h-full items-center justify-center writing-mode-vertical z-20 flex md:flex"
->
-  <VerticalScroll />
-</motion.div>
-        <BackgroundBeams />
+      <motion.div
+        initial={{opacity: 0, x: 20}}
+        animate={{opacity: 1, x: 0}}
+        transition={{duration: 0.8, delay: 1.2}}
+        className="absolute right-4 top-0 h-full items-center justify-center writing-mode-vertical z-20 flex md:flex"
+      >
+        <VerticalScroll/>
+      </motion.div>
+      <BackgroundBeams/>
     </div>
   )
 }

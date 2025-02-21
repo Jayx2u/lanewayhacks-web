@@ -1,32 +1,32 @@
 "use client"
-import { Analytics } from "@vercel/analytics/react"
-import { motion } from "framer-motion"
+import {Analytics} from "@vercel/analytics/react"
+import {motion} from "framer-motion"
 import PageTransition from "@/src/components/animations/page-transition"
 import HeroSection from "@/src/components/sections/hero-section"
 import StickyFooter from "@/src/components/sections/sticky-footer"
 
 const sectionVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
+  hidden: {opacity: 0, y: 20},
+  visible: {opacity: 1, y: 0}
 }
 
 const cardVariants = {
-  hidden: { opacity: 0, scale: 0.9 },
-  visible: { opacity: 1, scale: 1 }
+  hidden: {opacity: 0, scale: 0.9},
+  visible: {opacity: 1, scale: 1}
 }
 
 export default function Home() {
   return (
     <PageTransition>
       <main className="relative">
-        <HeroSection />
+        <HeroSection/>
 
         <motion.section
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{once: true}}
           variants={sectionVariants}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{duration: 0.8, delay: 0.2}}
           className="min-h-screen bg-[#362741] py-20"
         >
           <div className="container mx-auto px-4">
@@ -41,7 +41,7 @@ export default function Home() {
                 <motion.div
                   key={index}
                   variants={cardVariants}
-                  transition={{ duration: 0.8, delay: 0.4 + index * 0.2 }}
+                  transition={{duration: 0.8, delay: 0.4 + index * 0.2}}
                   className="p-6 rounded-lg bg-[#281c30] border border-[#5B447A]"
                 >
                   <h3 className="text-xl font-semibold mb-3 text-[#B791FF]">
@@ -59,9 +59,9 @@ export default function Home() {
         <motion.section
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{once: true}}
           variants={sectionVariants}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{duration: 0.8, delay: 0.2}}
           className="min-h-screen bg-[#281c30] py-20"
         >
           <div className="container mx-auto px-4">
@@ -76,7 +76,7 @@ export default function Home() {
                 <motion.div
                   key={index}
                   variants={cardVariants}
-                  transition={{ duration: 0.8, delay: 0.4 + index * 0.2 }}
+                  transition={{duration: 0.8, delay: 0.4 + index * 0.2}}
                   className="p-6 rounded-lg bg-[#362741] border border-[#5B447A]"
                 >
                   <h3 className="text-xl font-semibold mb-3 text-[#B791FF]">
@@ -91,8 +91,8 @@ export default function Home() {
           </div>
         </motion.section>
 
-        <StickyFooter />
-        <Analytics />
+        <StickyFooter/>
+        <Analytics/>
       </main>
     </PageTransition>
   )
