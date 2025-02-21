@@ -6,6 +6,7 @@ import {BackgroundBeams} from "@/src/components/animations/background-beams"
 import VerticalScroll from "@/src/components/animations/vertical-inf-text-scroll"
 import MaskedText from "@/src/components/animations/masked-text"
 import EmailSignup from '@/src/components/ui/input'
+import {FaDiscord} from 'react-icons/fa'
 
 export default function HeroSection() {
   return (
@@ -47,15 +48,37 @@ export default function HeroSection() {
         />
         <MaskedText
           text="REGISTER YOUR INTEREST"
-          className="text-[#B791FF] text-base md:text-lg font-unbounded font-black"
+          className="text-[#B791FF] text-base md:text-lg font-unbounded font-black mb-2"
         />
         <motion.div
           initial={{opacity: 0, y: 20}}
           animate={{opacity: 1, y: 0}}
           transition={{duration: 0.8, delay: 0.8}}
-          className="flex justify-end md:justify-end font-unbounded my-4"
+          className="flex justify-end md:justify-end font-unbounded"
         >
           <EmailSignup/>
+        </motion.div>
+        <motion.div
+          initial={{opacity: 0, y: 20}}
+          animate={{opacity: 1, y: 0}}
+          transition={{duration: 0.8, delay: 1}}
+          className="flex flex-col items-end justify-end mt-8"
+        >
+          <MaskedText
+            text="JOIN THE CONVERSATION"
+            className="text-[#B791FF] text-base md:text-lg font-unbounded font-black mb-2"
+          />
+          <a
+            href="https://discord.gg/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#6B5A7B] px-6 py-3 text-[#D9D5EE]
+               hover:bg-[#8B7AA1] transition-colors duration-300
+               font-medium shadow-lg shadow-[#281c30]/50"
+          >
+            <FaDiscord size={20}/>
+            Join Discord
+          </a>
         </motion.div>
       </div>
 
@@ -75,10 +98,14 @@ export default function HeroSection() {
             <PiStarFourFill className="order-1 md:order-2"/>
           </motion.div>
         </div>
-        <MaskedText
-          text="MELBOURNE CBD, AUSTRALIA"
+        <motion.div
+          initial={{opacity: 0, y: 20}}
+          animate={{opacity: 1, y: 0}}
+          transition={{duration: 0.8, delay: 1}}
           className="text-[#D9D5EE] text-base md:text-lg lg:text-xl font-medium mt-2"
-        />
+        >
+          MELBOURNE CBD, AUSTRALIA
+        </motion.div>
       </div>
 
       <motion.div

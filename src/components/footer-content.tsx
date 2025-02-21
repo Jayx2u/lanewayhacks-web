@@ -1,7 +1,7 @@
 import React from 'react'
 import MaskedText from '@/src/components/animations/masked-text'
 import Link from 'next/link'
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import {FaGithub, FaInstagram, FaLinkedin, FaTwitter} from 'react-icons/fa'
 
 export default function Content() {
   return (
@@ -24,11 +24,10 @@ const Section1 = () => {
 const Section2 = () => {
   return (
     <div className='flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-0'>
-      <MaskedText
-        text="Laneway Hacks"
-        className='text-[12vw] md:text-[14vw] leading-[0.8] mt-6 md:mt-10 text-[#281C30]'
-      />
-      <span className='text-sm md:text-base text-[#D9D5EE]'>©copyright</span>
+      <h2 className='text-[12vw] md:text-[14vw] leading-[0.8] mt-6 md:mt-10 text-[#281C30]'>
+        Laneway Hacks
+      </h2>
+      <span className='text-sm md:text-base text-[#D9D5EE]'>©-2025</span>
     </div>
   )
 }
