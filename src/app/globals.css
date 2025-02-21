@@ -15,6 +15,10 @@ body {
   font-family: 'Unbounded', sans-serif;
 }
 
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

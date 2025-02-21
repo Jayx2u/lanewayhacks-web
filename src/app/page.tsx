@@ -46,7 +46,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold mb-3 text-[#B791FF]">
                     {item.title}
                   </h3>
-                  <p className="text-[#D9D5EE]">
+                  <p className="text-[#D9D5EE] font-poppins">
                     {item.content}
                   </p>
                 </motion.div>
@@ -81,7 +81,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold mb-3 text-[#B791FF]">
                     {item.title}
                   </h3>
-                  <p className="text-[#D9D5EE]">
+                  <p className="text-[#D9D5EE] font-poppins">
                     {item.content}
                   </p>
                 </motion.div>
