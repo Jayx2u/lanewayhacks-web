@@ -12,6 +12,29 @@ export default function HeroSection() {
   return (
     <div
       className="min-h-screen w-full bg-[#281c30] relative flex flex-col items-end justify-start antialiased p-8 pr-16 text-unbounded overflow-hidden">
+
+      {/* Noise Texture */}
+      <Image
+        src="/elements/noise.png"
+        alt="Noise Texture"
+        fill
+        className="absolute inset-0 object-cover mix-blend-overlay opacity-20 z-0"
+        priority
+        draggable={false}
+      />
+
+      {/* Background Elements */}
+      <Image
+        src="/elements/star-1.png"
+        alt="Background Element 1"
+        width={500}
+        height={500}
+        className="absolute -top-48 -left-48 z-[1]"
+        priority
+        draggable={false}
+      />
+
+      {/* Hero Section */}
       <motion.div
         initial={{opacity: 0, y: 20}}
         animate={{opacity: 1, y: 0}}
