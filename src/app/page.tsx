@@ -3,16 +3,36 @@ import {motion} from "framer-motion"
 import PageTransition from "@/src/components/animations/page-transition"
 import HeroSection from "@/src/components/sections/hero-section"
 import StickyFooter from "@/src/components/sections/sticky-footer"
+import Image from "next/image";
 
 const sectionVariants = {
-  hidden: {opacity: 0, y: 20},
-  visible: {opacity: 1, y: 0}
-}
+  hidden: {opacity: 0, y: 100},
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: [0.25, 0.1, 0, 1]
+    }
+  }
+};
 
 const cardVariants = {
-  hidden: {opacity: 0, scale: 0.9},
-  visible: {opacity: 1, scale: 1}
-}
+  hidden: {
+    opacity: 0,
+    y: 50,
+    scale: 0.95
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.25, 0.1, 0, 1]
+    }
+  }
+};
 
 export default function Home() {
   return (
@@ -23,34 +43,56 @@ export default function Home() {
         <motion.section
           initial="hidden"
           whileInView="visible"
-          viewport={{once: true}}
+          viewport={{ once: true, margin: "-100px" }}
           variants={sectionVariants}
-          transition={{duration: 0.8, delay: 0.2}}
-          className="min-h-screen bg-[#362741] py-20"
+          className="min-h-screen bg-[#362741] py-32 relative"
         >
-          <div className="container mx-auto px-4">
-            <motion.h2
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#281c30]/30"/>
+
+          <div className="container mx-auto px-4 relative">
+            <motion.div
               variants={sectionVariants}
-              className="text-4xl md:text-5xl font-bold mb-8 text-[#D9D5EE]"
+              className="flex flex-col items-start mb-16"
             >
-              What is LanewayHacks?
-            </motion.h2>
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              {whatIsContent.map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={cardVariants}
-                  transition={{duration: 0.8, delay: 0.4 + index * 0.2}}
-                  className="p-6 rounded-lg bg-[#281c30] border border-[#5B447A]"
-                >
-                  <h3 className="text-xl font-semibold mb-3 text-[#B791FF]">
-                    {item.title}
-                  </h3>
-                  <p className="text-[#D9D5EE] font-poppins">
-                    {item.content}
-                  </p>
-                </motion.div>
-              ))}
+              <span className="text-[#B791FF] text-sm tracking-[0.3em] uppercase mb-4">
+                About the Event
+              </span>
+              <h2 className="text-6xl md:text-7xl font-bold text-[#D9D5EE] leading-tight max-w-4xl">
+                What is <br/>LanewayHacks?
+              </h2>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="flex flex-col gap-8">
+                {whatIsContent.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    variants={cardVariants}
+                    transition={{ duration: 0.8, delay: 0.2 * index }}
+                    className="group p-8 bg-[#281c30]/50 backdrop-blur-sm border border-[#5B447A]
+                       hover:border-[#B791FF] transition-all duration-500"
+                  >
+                    <h3 className="text-2xl font-semibold mb-6 text-[#B791FF]
+                           group-hover:translate-x-2 transition-transform duration-500">
+                      {item.title}
+                    </h3>
+                    <p className="text-[#D9D5EE]/80 font-light leading-relaxed text-lg">
+                      {item.content}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+              <motion.div
+                variants={cardVariants}
+                className="relative h-full min-h-[600px] rounded-lg overflow-hidden"
+              >
+                <Image
+                  src="/images/1.png"
+                  alt="Students collaborating"
+                  className="object-cover w-full h-full"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#281c30] via-transparent to-transparent"/>
+              </motion.div>
             </div>
           </div>
         </motion.section>
@@ -58,34 +100,56 @@ export default function Home() {
         <motion.section
           initial="hidden"
           whileInView="visible"
-          viewport={{once: true}}
+          viewport={{ once: true, margin: "-100px" }}
           variants={sectionVariants}
-          transition={{duration: 0.8, delay: 0.2}}
-          className="min-h-screen bg-[#281c30] py-20"
+          className="min-h-screen bg-[#281c30] py-32 relative"
         >
-          <div className="container mx-auto px-4">
-            <motion.h2
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-[#362741]/30"/>
+
+          <div className="container mx-auto px-4 relative">
+            <motion.div
               variants={sectionVariants}
-              className="text-4xl md:text-5xl font-bold mb-8 text-[#D9D5EE]"
+              className="flex flex-col items-end text-right mb-16"
             >
-              Why Participate?
-            </motion.h2>
-            <div className="grid md:grid-cols-2 gap-12 mt-12">
-              {whyParticipateContent.map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={cardVariants}
-                  transition={{duration: 0.8, delay: 0.4 + index * 0.2}}
-                  className="p-6 rounded-lg bg-[#362741] border border-[#5B447A]"
-                >
-                  <h3 className="text-xl font-semibold mb-3 text-[#B791FF]">
-                    {item.title}
-                  </h3>
-                  <p className="text-[#D9D5EE] font-poppins">
-                    {item.content}
-                  </p>
-                </motion.div>
-              ))}
+              <span className="text-[#B791FF] text-sm tracking-[0.3em] uppercase mb-4">
+                Benefits
+              </span>
+              <h2 className="text-6xl md:text-7xl font-bold text-[#D9D5EE] leading-tight max-w-4xl ml-auto">
+                Why <br/>Participate?
+              </h2>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-12">
+              <motion.div
+                variants={cardVariants}
+                className="relative h-full min-h-[600px] rounded-lg overflow-hidden"
+              >
+                <Image
+                  src="/images/1.png"
+                  alt="Hackathon participants"
+                  className="object-cover w-full h-full"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#281c30] via-transparent to-transparent"/>
+              </motion.div>
+              <div className="flex flex-col gap-8">
+                {whyParticipateContent.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    variants={cardVariants}
+                    transition={{ duration: 0.8, delay: 0.2 * index }}
+                    className="group p-8 bg-[#362741]/50 backdrop-blur-sm border border-[#5B447A]
+                       hover:border-[#B791FF] transition-all duration-500"
+                  >
+                    <h3 className="text-2xl font-semibold mb-6 text-[#B791FF]
+                           group-hover:translate-x-2 transition-transform duration-500">
+                      {item.title}
+                    </h3>
+                    <p className="text-[#D9D5EE]/80 font-light leading-relaxed text-lg">
+                      {item.content}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </motion.section>
