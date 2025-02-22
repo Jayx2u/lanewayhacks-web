@@ -90,6 +90,8 @@ export default function Home() {
                   src="/images/1.png"
                   alt="Students collaborating"
                   className="object-cover w-full h-full"
+                  width={700}
+                  height={700}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#281c30] via-transparent to-transparent"/>
               </motion.div>
@@ -128,6 +130,8 @@ export default function Home() {
                   src="/images/1.png"
                   alt="Hackathon participants"
                   className="object-cover w-full h-full"
+                  width={700}
+                  height={700}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#281c30] via-transparent to-transparent"/>
               </motion.div>
