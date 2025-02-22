@@ -40,43 +40,44 @@ export default function Home() {
       <main className="relative">
         <HeroSection/>
 
+        {/* Left-aligned What Is section */}
         <motion.section
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{once: true, margin: "-100px"}}
           variants={sectionVariants}
-          className="min-h-screen bg-[#362741] py-32 relative"
+          className="min-h-screen bg-[#362741] py-16 md:py-32 relative"
         >
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#281c30]/30"/>
 
-          <div className="container mx-auto px-4 relative">
+          <div className="container mx-auto px-4 sm:px-6 relative">
             <motion.div
               variants={sectionVariants}
-              className="flex flex-col items-start mb-16"
+              className="flex flex-col items-start mb-8 md:mb-16"
             >
               <span className="text-[#B791FF] text-sm tracking-[0.3em] uppercase mb-4">
                 About the Event
               </span>
-              <h2 className="text-6xl md:text-7xl font-bold text-[#D9D5EE] leading-tight max-w-4xl">
-                What is <br/>LanewayHacks?
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-[#D9D5EE] leading-tight max-w-4xl">
+                What is <br className="hidden sm:block"/>LanewayHacks?
               </h2>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-12">
-              <div className="flex flex-col gap-8">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-12">
+              <div className="flex flex-col gap-4 md:gap-8">
                 {whatIsContent.map((item, index) => (
                   <motion.div
                     key={index}
                     variants={cardVariants}
-                    transition={{ duration: 0.8, delay: 0.2 * index }}
-                    className="group p-8 bg-[#281c30]/50 backdrop-blur-sm border border-[#5B447A]
+                    transition={{duration: 0.8, delay: 0.2 * index}}
+                    className="group p-6 md:p-8 bg-[#281c30]/50 backdrop-blur-sm border border-[#5B447A]
                        hover:border-[#B791FF] transition-all duration-500"
                   >
-                    <h3 className="text-2xl font-semibold mb-6 text-[#B791FF]
+                    <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-[#B791FF]
                            group-hover:translate-x-2 transition-transform duration-500">
                       {item.title}
                     </h3>
-                    <p className="text-[#D9D5EE]/80 font-light leading-relaxed text-lg">
+                    <p className="text-base md:text-lg text-[#D9D5EE]/80 font-light leading-relaxed">
                       {item.content}
                     </p>
                   </motion.div>
@@ -84,7 +85,7 @@ export default function Home() {
               </div>
               <motion.div
                 variants={cardVariants}
-                className="relative h-full min-h-[600px] rounded-lg overflow-hidden"
+                className="relative h-[300px] md:h-full md:min-h-[600px] rounded-lg overflow-hidden order-first md:order-last"
               >
                 <Image
                   src="/images/1.png"
@@ -99,32 +100,34 @@ export default function Home() {
           </div>
         </motion.section>
 
+        {/* Right-aligned Why Participate section */}
         <motion.section
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{once: true, margin: "-100px"}}
           variants={sectionVariants}
-          className="min-h-screen bg-[#281c30] py-32 relative"
+          className="min-h-screen bg-[#281c30] py-16 md:py-32 relative"
         >
           <div className="absolute inset-0 bg-gradient-to-t from-transparent to-[#362741]/30"/>
 
-          <div className="container mx-auto px-4 relative">
+          <div className="container mx-auto px-4 sm:px-6 relative">
             <motion.div
               variants={sectionVariants}
-              className="flex flex-col items-end text-right mb-16"
+              className="flex flex-col items-start md:items-end text-left md:text-right mb-8 md:mb-16"
             >
               <span className="text-[#B791FF] text-sm tracking-[0.3em] uppercase mb-4">
                 Benefits
               </span>
-              <h2 className="text-6xl md:text-7xl font-bold text-[#D9D5EE] leading-tight max-w-4xl ml-auto">
-                Why <br/>Participate?
+              <h2
+                className="text-4xl sm:text-5xl md:text-7xl font-bold text-[#D9D5EE] leading-tight max-w-4xl md:ml-auto">
+                Why <br className="hidden sm:block"/>Participate?
               </h2>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-12">
               <motion.div
                 variants={cardVariants}
-                className="relative h-full min-h-[600px] rounded-lg overflow-hidden"
+                className="relative h-[300px] md:h-full md:min-h-[600px] rounded-lg overflow-hidden order-first"
               >
                 <Image
                   src="/images/1.png"
@@ -135,20 +138,20 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#281c30] via-transparent to-transparent"/>
               </motion.div>
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-4 md:gap-8">
                 {whyParticipateContent.map((item, index) => (
                   <motion.div
                     key={index}
                     variants={cardVariants}
-                    transition={{ duration: 0.8, delay: 0.2 * index }}
-                    className="group p-8 bg-[#362741]/50 backdrop-blur-sm border border-[#5B447A]
+                    transition={{duration: 0.8, delay: 0.2 * index}}
+                    className="group p-6 md:p-8 bg-[#362741]/50 backdrop-blur-sm border border-[#5B447A]
                        hover:border-[#B791FF] transition-all duration-500"
                   >
-                    <h3 className="text-2xl font-semibold mb-6 text-[#B791FF]
+                    <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-[#B791FF]
                            group-hover:translate-x-2 transition-transform duration-500">
                       {item.title}
                     </h3>
-                    <p className="text-[#D9D5EE]/80 font-light leading-relaxed text-lg">
+                    <p className="text-base md:text-lg text-[#D9D5EE]/80 font-light leading-relaxed">
                       {item.content}
                     </p>
                   </motion.div>
