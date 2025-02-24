@@ -3,7 +3,7 @@ import {PiStarFourFill} from "react-icons/pi";
 
 function VerticalScroll() {
   const text = (
-    <div className="transform rotate-180 whitespace-nowrap tracking-widest text-[#C5B5D9] opacity-80 text-lg font-thin"
+    <div className="whitespace-nowrap tracking-widest text-[#C5B5D9] opacity-80 text-lg font-thin"
          style={{writingMode: 'vertical-rl'}}>
       <span className="flex flex-row items-center gap-2">
         HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON <PiStarFourFill/> HACKATHON
@@ -22,9 +22,10 @@ function VerticalScroll() {
         transition={{
           repeat: Infinity,
           duration: 34,
-          ease: 'linear'
+          ease: 'linear',
+          repeatType: "loop"
         }}
-        className="flex flex-col items-center"
+        className="flex flex-col items-center absolute right-0 [writing-mode:vertical-rl] rotate-180"
       >
         {text}
       </motion.div>
