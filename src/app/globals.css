@@ -7,10 +7,6 @@ body {
   font-family: 'Unbounded', sans-serif;
 }
 
-@theme {
-  --color-hack-purple: #281c30;
-}
-
 .font-unbounded {
   font-family: 'Unbounded', sans-serif;
 }

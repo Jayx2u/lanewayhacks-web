@@ -55,10 +55,10 @@ export default function Home() {
               variants={sectionVariants}
               className="flex flex-col items-start mb-8 md:mb-16"
             >
-              <span className="text-[#B791FF] text-sm tracking-[0.3em] uppercase mb-4">
+              <span className="text-hack-purple text-sm tracking-[0.3em] uppercase mb-4">
                 About the Event
               </span>
-              <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-[#D9D5EE] leading-tight max-w-4xl">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-hack-white leading-tight max-w-4xl">
                 What is <br className="hidden sm:block"/>LanewayHacks?
               </h2>
             </motion.div>
@@ -71,13 +71,13 @@ export default function Home() {
                     variants={cardVariants}
                     transition={{duration: 0.8, delay: 0.2 * index}}
                     className="group p-6 md:p-8 bg-[#281c30]/50 backdrop-blur-sm border border-[#5B447A]
-                       hover:border-[#B791FF] transition-all duration-500"
+                       hover:border-hack-purple transition-all duration-500"
                   >
-                    <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-[#B791FF]
+                    <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-hack-purple
                            group-hover:translate-x-2 transition-transform duration-500">
                       {item.title}
                     </h3>
-                    <p className="text-base md:text-lg text-[#D9D5EE]/80 font-light leading-relaxed">
+                    <p className="text-base md:text-lg text-hack-white/80 font-light leading-relaxed">
                       {item.content}
                     </p>
                   </motion.div>
@@ -115,11 +115,11 @@ export default function Home() {
               variants={sectionVariants}
               className="flex flex-col items-start md:items-end text-left md:text-right mb-8 md:mb-16"
             >
-              <span className="text-[#B791FF] text-sm tracking-[0.3em] uppercase mb-4">
+              <span className="text-hack-purple text-sm tracking-[0.3em] uppercase mb-4">
                 Benefits
               </span>
               <h2
-                className="text-4xl sm:text-5xl md:text-7xl font-bold text-[#D9D5EE] leading-tight max-w-4xl md:ml-auto">
+                className="text-4xl sm:text-5xl md:text-7xl font-bold text-hack-white leading-tight max-w-4xl md:ml-auto">
                 Why <br className="hidden sm:block"/>Participate?
               </h2>
             </motion.div>
@@ -145,13 +145,13 @@ export default function Home() {
                     variants={cardVariants}
                     transition={{duration: 0.8, delay: 0.2 * index}}
                     className="group p-6 md:p-8 bg-[#362741]/50 backdrop-blur-sm border border-[#5B447A]
-                       hover:border-[#B791FF] transition-all duration-500"
+                       hover:border-hack-purple transition-all duration-500"
                   >
-                    <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-[#B791FF]
+                    <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-hack-purple
                            group-hover:translate-x-2 transition-transform duration-500">
                       {item.title}
                     </h3>
-                    <p className="text-base md:text-lg text-[#D9D5EE]/80 font-light leading-relaxed">
+                    <p className="text-base md:text-lg text-hack-white/80 font-light leading-relaxed">
                       {item.content}
                     </p>
                   </motion.div>

@@ -26,7 +26,8 @@ export default {
 
 			// OTHER
   		colors: {
-				'hack-purple': '#281c30',
+				'hack-purple': '#B791FF',
+				'hack-white': '#D9D5EE',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

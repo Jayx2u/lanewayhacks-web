@@ -61,7 +61,7 @@ export default function HeroSection() {
         />
         <MaskedText
           text="We will be hosting Melbourne's largest hackathon for high school students: Laneway Hacks 2025! Student participants will embark on an exhilarating 8-hour journey to create original projects that push the boundaries of their technical skills and creativity."
-          className="text-[#D9D5EE] my-2 text-base md:text-lg lg:text-xl pl-0 md:pl-4 font-unbounded"
+          className="text-hack-white my-2 text-base md:text-lg lg:text-xl pl-0 md:pl-4 font-unbounded"
         />
         <motion.hr
           initial={{scaleX: 0}}
@@ -71,7 +71,7 @@ export default function HeroSection() {
         />
         <MaskedText
           text="REGISTER YOUR INTEREST"
-          className="text-[#B791FF] text-base md:text-lg font-unbounded font-black mb-2"
+          className="text-hack-purple text-base md:text-lg font-unbounded font-black mb-2"
         />
         <motion.div
           initial={{opacity: 0, y: 20}}
@@ -89,13 +89,13 @@ export default function HeroSection() {
         >
           <MaskedText
             text="JOIN THE CONVERSATION"
-            className="text-[#B791FF] text-base md:text-lg font-unbounded font-black mb-4"
+            className="text-hack-purple text-base md:text-lg font-unbounded font-black mb-4"
           />
           <a
             href="https://discord.gg/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#6B5A7B] px-6 py-3 text-[#D9D5EE]
+            className="inline-flex items-center gap-2 bg-[#6B5A7B] px-6 py-3 text-hack-white
                hover:bg-[#8B7AA1] transition-colors duration-300
                font-medium shadow-lg shadow-[#281c30]/50"
           >
@@ -108,7 +108,7 @@ export default function HeroSection() {
       <div
         className="relative w-full md:absolute md:bottom-8 md:left-8 flex flex-col z-10 font-unbounded text-right md:text-left mt-16 pt-8 px-4 md:px-0">
         <div
-          className="text-[#B791FF] text-3xl md:text-4xl lg:text-6xl font-bold flex items-center gap-2 w-full justify-end md:justify-start">
+          className="text-hack-purple text-3xl md:text-4xl lg:text-6xl font-bold flex items-center gap-2 w-full justify-end md:justify-start">
           <MaskedText
             text="Q3 2025"
             className="order-2 md:order-1"
@@ -125,7 +125,7 @@ export default function HeroSection() {
           initial={{opacity: 0, y: 20}}
           animate={{opacity: 1, y: 0}}
           transition={{duration: 0.8, delay: 1}}
-          className="text-[#D9D5EE] text-base md:text-lg lg:text-xl font-medium mt-2"
+          className="text-hack-white text-base md:text-lg lg:text-xl font-medium mt-2"
         >
           MELBOURNE CBD, AUSTRALIA
         </motion.div>
