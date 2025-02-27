@@ -24,7 +24,7 @@ const Section1 = () => {
 const Section2 = () => {
   return (
     <div className='flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-0'>
-      <h2 className='text-[12vw] md:text-[14vw] leading-[0.8] mt-6 md:mt-10 text-[#281C30]'>
+      <h2 className='text-6xl md:text-8xl leading-[0.8] mt-6 md:mt-10 text-[#281C30] break-words max-w-full'>
         Laneway Hacks
       </h2>
       <span className='text-sm md:text-base text-[#D9D5EE]'>©-2025</span>
@@ -45,7 +45,7 @@ const Nav = () => {
       <div className='flex flex-col gap-2'>
         <MaskedText text="Education" className='mb-2 uppercase text-[#B791FF]'/>
         <NavLink text="News" href="/news"/>
-        <NavLink text="Hack Club" href="/hack-club"/>
+        <NavLink text="Code of Conduct" href="/conduct"/>
       </div>
     </div>
   )
@@ -72,7 +72,7 @@ const NavLink = ({text, href}: { text: string; href: string }) => (
 )
 
 const SocialLink = ({href, icon}: { href: string; icon: React.ReactNode }) => (
-  <Link href={href} target="_blank" rel="noopener noreferrer"
+  <Link href={href} target="_blank" rel="noopener"
         className='text-[#D9D5EE] hover:text-[#B791FF] transition-colors'>
     {icon}
   </Link>

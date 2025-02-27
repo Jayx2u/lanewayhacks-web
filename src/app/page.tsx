@@ -2,7 +2,7 @@
 import {motion} from "framer-motion"
 import PageTransition from "@/src/components/animations/page-transition"
 import HeroSection from "@/src/components/sections/hero-section"
-import StickyFooter from "@/src/components/sections/sticky-footer"
+import Footer from "@/src/components/sections/footer"
 import Image from "next/image";
 
 const sectionVariants = {
@@ -161,7 +161,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        <StickyFooter/>
+        <Footer/>
       </main>
     </PageTransition>
   )
