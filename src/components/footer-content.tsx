@@ -61,7 +61,8 @@ const Socials = () => {
           <SocialLink href="https://linkedin.com/company/lanewayhacks" icon={<FaLinkedin size={24}/>}/>
           <SocialLink href="https://instagram.com/lanewayhacks" icon={<FaInstagram size={24}/>}/>
         </div>
-        <Link href="mailto:hello@lanewayhacks.org" className='text-hack-white hover:text-hack-purple transition-colors text-sm text-left md:text-right'>
+        <Link href="mailto:hello@lanewayhacks.org"
+              className='text-hack-white hover:text-hack-purple transition-colors text-sm text-left md:text-right'>
           hello@lanewayhacks.org
         </Link>
       </div>

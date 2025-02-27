@@ -2,6 +2,7 @@
 import {motion} from "framer-motion"
 import PageTransition from "@/src/components/animations/page-transition"
 import HeroSection from "@/src/components/sections/hero-section"
+import FAQAccordion from '@/src/components/sections/faq'
 import Footer from "@/src/components/sections/footer"
 import Image from "next/image";
 
@@ -160,6 +161,7 @@ export default function Home() {
             </div>
           </div>
         </motion.section>
+        <FAQAccordion />
 
         <Footer/>
       </main>
