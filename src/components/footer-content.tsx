@@ -55,11 +55,16 @@ const Socials = () => {
   return (
     <div className='mt-8 md:mt-0'>
       <MaskedText text="Connect" className='mb-4 uppercase text-[#B791FF] md:text-right text-left'/>
-      <div className='flex gap-4'>
-        <SocialLink href="https://github.com/lanewayhacks" icon={<FaGithub size={24}/>}/>
-        <SocialLink href="https://twitter.com/lanewayhacks" icon={<FaTwitter size={24}/>}/>
-        <SocialLink href="https://linkedin.com/company/lanewayhacks" icon={<FaLinkedin size={24}/>}/>
-        <SocialLink href="https://instagram.com/lanewayhacks" icon={<FaInstagram size={24}/>}/>
+      <div className='flex flex-col gap-4'>
+        <div className='flex gap-4 md:justify-end'>
+          <SocialLink href="https://github.com/lanewayhacks" icon={<FaGithub size={24}/>}/>
+          <SocialLink href="https://twitter.com/lanewayhacks" icon={<FaTwitter size={24}/>}/>
+          <SocialLink href="https://linkedin.com/company/lanewayhacks" icon={<FaLinkedin size={24}/>}/>
+          <SocialLink href="https://instagram.com/lanewayhacks" icon={<FaInstagram size={24}/>}/>
+        </div>
+        <Link href="mailto:hello@lanewayhacks.org" className='text-[#D9D5EE] hover:text-[#B791FF] transition-colors text-sm text-left md:text-right'>
+          hello@lanewayhacks.org
+        </Link>
       </div>
     </div>
   )
