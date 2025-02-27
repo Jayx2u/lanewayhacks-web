@@ -40,7 +40,6 @@ const Nav = () => {
         <NavLink text="Home" href="/"/>
         <NavLink text="Our Mission" href="/our-mission"/>
         <NavLink text="Sponsors" href="/sponsors"/>
-        <NavLink text="Contact Us" href="/contact"/>
       </div>
       <div className='flex flex-col gap-2'>
         <MaskedText text="Education" className='mb-2 uppercase text-hack-purple'/>

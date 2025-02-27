@@ -77,7 +77,7 @@ export default function Home() {
                            group-hover:translate-x-2 transition-transform duration-500">
                       {item.title}
                     </h3>
-                    <p className="text-base md:text-lg text-hack-white/80 font-light leading-relaxed">
+                    <p className="font-poppins text-base md:text-lg text-hack-white/80 font-light leading-relaxed">
                       {item.content}
                     </p>
                   </motion.div>
@@ -151,7 +151,7 @@ export default function Home() {
                            group-hover:translate-x-2 transition-transform duration-500">
                       {item.title}
                     </h3>
-                    <p className="text-base md:text-lg text-hack-white/80 font-light leading-relaxed">
+                    <p className="font-poppins text-base md:text-lg text-hack-white/80 font-light leading-relaxed">
                       {item.content}
                     </p>
                   </motion.div>
@@ -169,34 +169,34 @@ export default function Home() {
 
 const whatIsContent = [
   {
-    title: "8-Hour Challenge",
-    content: "An intensive hackathon where high school students collaborate, code, and create innovative solutions in just 8 hours. Perfect for both beginners and experienced coders."
+    title: "8-Hour Code Party!",
+    content: "An epic day where you and your squad can build the coolest, weirdest tech projects ever! Whether you're just starting out or you code in your sleep, there's space for everyone to create something awesome."
   },
   {
-    title: "Melbourne's Largest",
-    content: "Join the biggest high school hackathon in Melbourne, bringing together young minds from across the city. Experience the vibrant tech community in the heart of CBD."
+    title: "Melbourne's Biggest Teen Tech Fest",
+    content: "The most massive high school hackathon in all of Melbourne! Join hundreds of other teens taking over the CBD for a day of coding chaos and digital magic."
   },
   {
-    title: "Tech & Creativity",
-    content: "Push the boundaries of technical skills while fostering creativity in problem-solving. Work with modern tools and technologies to bring your ideas to life."
+    title: "Hardware Hacking Heaven",
+    content: "Solder, circuit boards, LEDs, oh my! This is where tech meets art and creativity has no limits. Create whatever artistic masterpiece you can imagine with physical components – the weirder and more wonderful, the better! No idea is too wild for this hardware playground."
   }
 ];
 
 const whyParticipateContent = [
   {
-    title: "Learn & Grow",
-    content: "Gain hands-on experience with new technologies and develop valuable problem-solving skills. Get mentorship from industry professionals and learn best practices."
+    title: "Level Up Your Skills",
+    content: "Learn cool new tech tricks and gain XP in coding, design, and teamwork. Our mentors are like walking cheat codes - they'll help you unlock achievements you never thought possible!"
   },
   {
-    title: "Network",
-    content: "Connect with like-minded students and industry mentors from Melbourne's tech community. Build relationships that extend beyond the hackathon."
+    title: "Make Friends, Not Just Code",
+    content: "Meet your people! Hang with other teens who get just as excited about tech as you do. From board games to karaoke breaks, this hackathon is one big social adventure."
   },
   {
-    title: "Win Prizes",
-    content: "Compete for exciting prizes and recognition for your innovative solutions. Show off your creativity and technical skills to win awards across various categories."
+    title: "Win Epic Loot",
+    content: "Score amazing prizes and bragging rights for your genius creations. We've got tech gadgets, swag, and other cool rewards that'll make your friends wish they came along!"
   },
   {
-    title: "Build Portfolio",
-    content: "Create projects that showcase your skills and creativity to future opportunities. Add real-world project experience to your resume and academic portfolio."
+    title: "Create Your Digital Legacy",
+    content: "Build something that shows off your superpowers to future schools and employers. Plus, you'll have an actual working project to show when your parents ask, 'What do you even do on that computer all day?'"
   }
 ];
