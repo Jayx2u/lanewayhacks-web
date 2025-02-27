@@ -95,7 +95,7 @@ export default function HeroSection() {
             href="https://discord.gg/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#6B5A7B] px-6 py-3 text-hack-white
+            className="inline-flex items-center gap-2 bg-hack-button px-6 py-3 text-hack-white
                hover:bg-[#8B7AA1] transition-colors duration-300
                font-medium shadow-lg shadow-[#281c30]/50"
           >

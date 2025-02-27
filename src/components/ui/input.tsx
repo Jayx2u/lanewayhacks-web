@@ -30,14 +30,14 @@ const EmailSignup = () => {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
           required
-          className="flex-1 bg-[#382a42] px-4 py-3 text-[#D9D5EE]
+          className="flex-1 bg-[#382a42] px-4 py-3 text-hack-white
                      placeholder:text-[#8B7AA1] border border-[#4D3E59]
-                     focus:outline-none focus:ring-2 focus:ring-[#6B5A7B]
+                     focus:outline-none focus:ring-2 focus:ring-hack-button
                      transition-all duration-300"
         />
         <button
           type="submit"
-          className="bg-[#6B5A7B] px-6 py-3 text-[#D9D5EE]
+          className="bg-hack-button px-6 py-3 text-hack-white
                      hover:bg-[#8B7AA1] transition-colors duration-300
                      font-medium shadow-lg shadow-[#281c30]/50"
         >
@@ -45,7 +45,7 @@ const EmailSignup = () => {
         </button>
       </div>
       {status && (
-        <p className="mt-2 text-sm text-[#D9D5EE]">{status}</p>
+        <p className="mt-2 text-sm text-hack-white">{status}</p>
       )}
     </form>
   );

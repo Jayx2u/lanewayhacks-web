@@ -28,6 +28,7 @@ export default {
   		colors: {
 				'hack-purple': '#B791FF',
 				'hack-white': '#D9D5EE',
+				'hack-button': '#6B5A7B',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
