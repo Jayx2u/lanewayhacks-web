@@ -27,23 +27,23 @@ const Section2 = () => {
       <h2 className='text-6xl md:text-8xl leading-[0.8] mt-6 md:mt-10 text-[#281C30] break-words max-w-full'>
         Laneway Hacks
       </h2>
-      <span className='text-sm md:text-base text-[#D9D5EE]'>©-2025</span>
+      <span className='text-sm md:text-base text-hack-white'>©-2025</span>
     </div>
   )
 }
 
 const Nav = () => {
   return (
-    <div className='flex flex-col md:flex-row shrink-0 gap-8 md:gap-20 text-[#D9D5EE]'>
+    <div className='flex flex-col md:flex-row shrink-0 gap-8 md:gap-20 text-hack-white'>
       <div className='flex flex-col gap-2'>
-        <MaskedText text="About" className='mb-2 uppercase text-[#B791FF]'/>
+        <MaskedText text="About" className='mb-2 uppercase text-hack-purple'/>
         <NavLink text="Home" href="/"/>
         <NavLink text="Our Mission" href="/our-mission"/>
         <NavLink text="Sponsors" href="/sponsors"/>
         <NavLink text="Contact Us" href="/contact"/>
       </div>
       <div className='flex flex-col gap-2'>
-        <MaskedText text="Education" className='mb-2 uppercase text-[#B791FF]'/>
+        <MaskedText text="Education" className='mb-2 uppercase text-hack-purple'/>
         <NavLink text="News" href="/news"/>
         <NavLink text="Code of Conduct" href="/conduct"/>
       </div>
@@ -54,7 +54,7 @@ const Nav = () => {
 const Socials = () => {
   return (
     <div className='mt-8 md:mt-0'>
-      <MaskedText text="Connect" className='mb-4 uppercase text-[#B791FF] md:text-right text-left'/>
+      <MaskedText text="Connect" className='mb-4 uppercase text-hack-purple md:text-right text-left'/>
       <div className='flex flex-col gap-4'>
         <div className='flex gap-4 md:justify-end'>
           <SocialLink href="https://github.com/lanewayhacks" icon={<FaGithub size={24}/>}/>
@@ -62,7 +62,7 @@ const Socials = () => {
           <SocialLink href="https://linkedin.com/company/lanewayhacks" icon={<FaLinkedin size={24}/>}/>
           <SocialLink href="https://instagram.com/lanewayhacks" icon={<FaInstagram size={24}/>}/>
         </div>
-        <Link href="mailto:hello@lanewayhacks.org" className='text-[#D9D5EE] hover:text-[#B791FF] transition-colors text-sm text-left md:text-right'>
+        <Link href="mailto:hello@lanewayhacks.org" className='text-hack-white hover:text-hack-purple transition-colors text-sm text-left md:text-right'>
           hello@lanewayhacks.org
         </Link>
       </div>
@@ -72,13 +72,13 @@ const Socials = () => {
 
 const NavLink = ({text, href}: { text: string; href: string }) => (
   <Link href={href}>
-    <MaskedText text={text} className="hover:text-[#B791FF] transition-colors"/>
+    <MaskedText text={text} className="hover:text-hack-purple transition-colors"/>
   </Link>
 )
 
 const SocialLink = ({href, icon}: { href: string; icon: React.ReactNode }) => (
   <Link href={href} target="_blank" rel="noopener"
-        className='text-[#D9D5EE] hover:text-[#B791FF] transition-colors'>
+        className='text-hack-white hover:text-hack-purple transition-colors'>
     {icon}
   </Link>
 )
