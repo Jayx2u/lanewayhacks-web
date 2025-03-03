@@ -27,7 +27,10 @@ export const BackgroundBeams = React.memo(({className}: { className?: string }) 
     "M-247 -341C-247 -341 -179 64 285 191C749 318 817 723 817 723",
   ]
   return (
-    <div
+    <motion.div
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      transition={{duration: 1.5, ease: "easeInOut"}}
       className={cn(
         "absolute h-full w-full inset-0 [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center",
         className,
@@ -41,22 +44,32 @@ export const BackgroundBeams = React.memo(({className}: { className?: string }) 
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <defs>
+          <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="4" result="blur"/>
+            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+          </filter>
+        </defs>
+
         <path
           d="M-380 -189C-380 -189 -312 216 152 343C616 470 684 875 684 875M-373 -197C-373 -197 -305 208 159 335C623 462 691 867 691 867M-366 -205C-366 -205 -298 200 166 327C630 454 698 859 698 859M-359 -213C-359 -213 -291 192 173 319C637 446 705 851 705 851M-352 -221C-352 -221 -284 184 180 311C644 438 712 843 712 843M-345 -229C-345 -229 -277 176 187 303C651 430 719 835 719 835M-338 -237C-338 -237 -270 168 194 295C658 422 726 827 726 827M-331 -245C-331 -245 -263 160 201 287C665 414 733 819 733 819M-324 -253C-324 -253 -256 152 208 279C672 406 740 811 740 811M-317 -261C-317 -261 -249 144 215 271C679 398 747 803 747 803M-310 -269C-310 -269 -242 136 222 263C686 390 754 795 754 795M-303 -277C-303 -277 -235 128 229 255C693 382 761 787 761 787M-296 -285C-296 -285 -228 120 236 247C700 374 768 779 768 779M-289 -293C-289 -293 -221 112 243 239C707 366 775 771 775 771M-282 -301C-282 -301 -214 104 250 231C714 358 782 763 782 763M-275 -309C-275 -309 -207 96 257 223C721 350 789 755 789 755M-268 -317C-268 -317 -200 88 264 215C728 342 796 747 796 747M-261 -325C-261 -325 -193 80 271 207C735 334 803 739 803 739M-254 -333C-254 -333 -186 72 278 199C742 326 810 731 810 731M-247 -341C-247 -341 -179 64 285 191C749 318 817 723 817 723"
           stroke="url(#paint0_radial_242_278)"
-          strokeOpacity="0.1"
+          strokeOpacity="0.15"
           strokeWidth="0.5"
         ></path>
 
-        {paths.map((path, index) => (
-          <motion.path
-            key={`path-` + index}
-            d={path}
-            stroke={`url(#linearGradient-${index})`}
-            strokeOpacity="0.8"
-            strokeWidth="1"
-          ></motion.path>
-        ))}
+        <g filter="url(#glow)">
+          {paths.map((path, index) => (
+            <motion.path
+              key={`path-` + index}
+              d={path}
+              stroke={`url(#linearGradient-${index})`}
+              strokeOpacity="1"
+              strokeWidth="1.5"
+            ></motion.path>
+          ))}
+        </g>
+
         <defs>
           {paths.map((path, index) => (
             <motion.linearGradient
@@ -81,9 +94,10 @@ export const BackgroundBeams = React.memo(({className}: { className?: string }) 
                 delay: Math.random() * 10,
               }}
             >
-              <stop stopColor="#B791FF" stopOpacity="0"></stop>
-              <stop stopColor="#B791FF"></stop>
-              <stop offset="32.5%" stopColor="#DFCBFF"></stop>
+              <stop stopColor="#B791FF" stopOpacity="0.2"></stop>
+              <stop offset="10%" stopColor="#C9AAFF" stopOpacity="0.8"></stop>
+              <stop offset="32.5%" stopColor="#EFEAFF"></stop>
+              <stop offset="55%" stopColor="#DFCBFF" stopOpacity="0.8"></stop>
               <stop offset="100%" stopColor="#D9D5EE" stopOpacity="0"></stop>
             </motion.linearGradient>
           ))}
@@ -98,11 +112,11 @@ export const BackgroundBeams = React.memo(({className}: { className?: string }) 
           >
             <stop offset="0.0666667" stopColor="var(--neutral-300)"></stop>
             <stop offset="0.243243" stopColor="var(--neutral-300)"></stop>
-            <stop offset="0.43594" stopColor="white" stopOpacity="0"></stop>
+            <stop offset="0.43594" stopColor="white" stopOpacity="1"></stop>
           </radialGradient>
         </defs>
       </svg>
-    </div>
+    </motion.div>
   )
 })
 
