@@ -62,7 +62,7 @@ const FAQAccordion = () => {
   const faqItems = [
     {
       id: '01',
-      question: "Who Can Join LanewayHacks?",
+      question: "Who Can Join Laneway Hacks?",
       answer: "Any high school student in Melbourne can join! Whether you're a coding pro or just starting out, all skill levels are welcome. You just need curiosity and enthusiasm for technology!"
     },
     {
@@ -88,17 +88,18 @@ const FAQAccordion = () => {
     {
       id: '06',
       question: "Is There Any Cost To Join?",
-      answer: "Nope! LanewayHacks is completely free. We provide the venue, food, mentorship, and hardware components - all you need to bring is your creativity!"
+      answer: "Nope! Laneway Hacks is completely free. We provide the venue, food, mentorship, and hardware components - all you need to bring is your creativity!"
     },
     {
       id: '07',
       question: "Will There Be Food?",
-      answer: "Yes! We'll keep you energized with meals, snacks, and drinks throughout the event. We cater to various dietary requirements - just let us know in advance."
+      answer: "Yes! We'll keep you energised with meals, snacks, and drinks throughout the event. We cater to various dietary requirements - just let us know in advance."
     },
     {
       id: '08',
       question: "How Do I Register?",
-      answer: "Click the 'Register Now' button at the top of the page to secure your spot. Be quick - spaces fill up fast! You'll receive a confirmation email with all the details you need."
+      answer: "We are currently collecting interests to better plan our event! Fill out the quick form at the top of this page to join our waitlist, and you'll be the first to know when official registration opens. We'll email you all the important details including the exact date, location, and how to secure your spot!"
+      //answer: "Click the 'Register Now' button at the top of the page to secure your spot. Be quick - spaces fill up fast! You'll receive a confirmation email with all the details you need."
     }
   ];
 

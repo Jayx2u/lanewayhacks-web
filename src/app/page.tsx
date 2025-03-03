@@ -41,7 +41,7 @@ export default function Home() {
       <main className="relative">
         <HeroSection/>
 
-        {/* Left-aligned What Is section */}
+        {/* What Is section */}
         <motion.section
           initial="hidden"
           whileInView="visible"
@@ -51,7 +51,7 @@ export default function Home() {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#281c30]/30"/>
 
-          <div className="container mx-auto px-4 sm:px-6 relative">
+          <div className="w-full px-4 sm:px-6 lg:px-16 relative">
             <motion.div
               variants={sectionVariants}
               className="flex flex-col items-start mb-8 md:mb-16"
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* Right-aligned Why Participate section */}
+        {/* Why Participate section */}
         <motion.section
           initial="hidden"
           whileInView="visible"
@@ -111,7 +111,7 @@ export default function Home() {
         >
           <div className="absolute inset-0 bg-gradient-to-t from-transparent to-[#362741]/30"/>
 
-          <div className="container mx-auto px-4 sm:px-6 relative">
+          <div className="w-full px-4 sm:px-6 lg:px-16 relative">
             <motion.div
               variants={sectionVariants}
               className="flex flex-col items-start md:items-end text-left md:text-right mb-8 md:mb-16"
@@ -161,7 +161,28 @@ export default function Home() {
             </div>
           </div>
         </motion.section>
-        <FAQAccordion />
+
+        {/* FAQ Section */}
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once: true, margin: "-100px"}}
+          variants={sectionVariants}
+          className="w-full bg-[#281C30] py-24 md:py-40 relative"
+        >
+          <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#281c30]/0 to-[#281C30]"/>
+          <div className="w-full px-4 sm:px-6 lg:px-16 mb-16 md:mb-24">
+            <motion.div variants={sectionVariants} className="mb-16">
+              <span className="text-hack-purple text-sm tracking-[0.3em] uppercase mb-4 block">
+                Questions & Answers
+              </span>
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-hack-white leading-[0.9] max-w-4xl">
+                Frequently Asked<br className="hidden sm:block"/> Questions
+              </h2>
+            </motion.div>
+          </div>
+          <FAQAccordion/>
+        </motion.section>
 
         <Footer/>
       </main>
