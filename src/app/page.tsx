@@ -60,7 +60,7 @@ export default function Home() {
                 About the Event
               </span>
               <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-hack-white leading-tight max-w-4xl">
-                What is <br className="hidden sm:block"/>LanewayHacks?
+                What is <br className="hidden sm:block"/>Laneway Hacks?
               </h2>
             </motion.div>
 
@@ -170,7 +170,7 @@ export default function Home() {
           variants={sectionVariants}
           className="w-full bg-[#281C30] py-24 md:py-40 relative"
         >
-          <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#281c30]/0 to-[#281C30]"/>
+          <div className="absolute top-0 left-0 right-0 h-32"/>
           <div className="w-full px-4 sm:px-6 lg:px-16 mb-16 md:mb-24">
             <motion.div variants={sectionVariants} className="mb-16">
               <span className="text-hack-purple text-sm tracking-[0.3em] uppercase mb-4 block">
