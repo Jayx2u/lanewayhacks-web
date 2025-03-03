@@ -27,10 +27,7 @@ export const BackgroundBeams = React.memo(({className}: { className?: string }) 
     "M-247 -341C-247 -341 -179 64 285 191C749 318 817 723 817 723",
   ]
   return (
-    <motion.div
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      transition={{duration: 1.5, ease: "easeInOut"}}
+    <div
       className={cn(
         "absolute h-full w-full inset-0 [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center",
         className,
@@ -46,8 +43,8 @@ export const BackgroundBeams = React.memo(({className}: { className?: string }) 
       >
         <defs>
           <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="4" result="blur"/>
-            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
           </filter>
         </defs>
 
@@ -116,7 +113,7 @@ export const BackgroundBeams = React.memo(({className}: { className?: string }) 
           </radialGradient>
         </defs>
       </svg>
-    </motion.div>
+    </div>
   )
 })
 
