@@ -89,8 +89,8 @@ export default function Home() {
                 className="relative h-[300px] md:h-full md:min-h-[600px] rounded-lg overflow-hidden order-first md:order-last"
               >
                 <Image
-                  src="/images/1.png"
-                  alt="Students collaborating"
+                  src="/images/2.png"
+                  alt="Students collaborating on hardware"
                   className="object-cover w-full h-full"
                   width={700}
                   height={700}

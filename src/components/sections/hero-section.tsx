@@ -6,7 +6,7 @@ import {BackgroundBeams} from "@/src/components/animations/background-beams"
 import VerticalScroll from "@/src/components/animations/vertical-inf-text-scroll"
 import MaskedText from "@/src/components/animations/masked-text"
 import EmailSignup from '@/src/components/ui/input'
-import {FaDiscord} from 'react-icons/fa'
+/*import {FaDiscord} from 'react-icons/fa'*/
 
 export default function HeroSection() {
   return (
@@ -81,7 +81,7 @@ export default function HeroSection() {
         >
           <EmailSignup/>
         </motion.div>
-        <motion.div
+        {/*<motion.div
           initial={{opacity: 0, y: 20}}
           animate={{opacity: 1, y: 0}}
           transition={{duration: 0.8, delay: 1}}
@@ -102,7 +102,7 @@ export default function HeroSection() {
             <FaDiscord size={20}/>
             Join Discord
           </a>
-        </motion.div>
+        </motion.div>*/}
       </div>
 
       <div

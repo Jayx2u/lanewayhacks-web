@@ -38,14 +38,14 @@ const Nav = () => {
       <div className='flex flex-col gap-2'>
         <MaskedText text="About" className='mb-2 uppercase text-hack-purple'/>
         <NavLink text="Home" href="/"/>
-        <NavLink text="Our Mission" href="/our-mission"/>
-        <NavLink text="Sponsors" href="/sponsors"/>
+        {/*<NavLink text="Our Mission" href="/our-mission"/>
+        <NavLink text="Sponsors" href="/sponsors"/>*/}
       </div>
-      <div className='flex flex-col gap-2'>
+      {/*<div className='flex flex-col gap-2'>
         <MaskedText text="Education" className='mb-2 uppercase text-hack-purple'/>
         <NavLink text="News" href="/news"/>
         <NavLink text="Code of Conduct" href="/conduct"/>
-      </div>
+      </div>*/}
     </div>
   )
 }
