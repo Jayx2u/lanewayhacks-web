@@ -139,7 +139,7 @@ export default function HeroSection() {
       >
         <VerticalScroll/>
       </motion.div>
-      <BackgroundBeams/>
+      <BackgroundBeams className="hidden md:block"/>
     </div>
   )
 }

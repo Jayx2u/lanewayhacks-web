@@ -21,10 +21,6 @@ export const BackgroundBeams = React.memo(({className}: { className?: string }) 
     "M-289 -293C-289 -293 -221 112 243 239C707 366 775 771 775 771",
     "M-282 -301C-282 -301 -214 104 250 231C714 358 782 763 782 763",
     "M-275 -309C-275 -309 -207 96 257 223C721 350 789 755 789 755",
-    "M-268 -317C-268 -317 -200 88 264 215C728 342 796 747 796 747",
-    "M-261 -325C-261 -325 -193 80 271 207C735 334 803 739 803 739",
-    "M-254 -333C-254 -333 -186 72 278 199C742 326 810 731 810 731",
-    "M-247 -341C-247 -341 -179 64 285 191C749 318 817 723 817 723",
   ]
   return (
     <div
@@ -43,8 +39,8 @@ export const BackgroundBeams = React.memo(({className}: { className?: string }) 
       >
         <defs>
           <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="4" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            <feGaussianBlur stdDeviation="4" result="blur"/>
+            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
           </filter>
         </defs>
 
