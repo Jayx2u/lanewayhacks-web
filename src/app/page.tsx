@@ -1,58 +1,225 @@
 "use client"
-import { BackgroundBeams } from "@/src/components/ui/background-beams"
-import EmailSignup from '@/src/components/ui/input'
-import Image from 'next/image'
-import { Analytics } from "@vercel/analytics/react"
-import { PiStarFourFill } from "react-icons/pi";
+import {motion} from "framer-motion"
+import PageTransition from "@/src/components/animations/page-transition"
+import HeroSection from "@/src/components/sections/hero-section"
+import FAQAccordion from '@/src/components/sections/faq'
+import Footer from "@/src/components/sections/footer"
+import Image from "next/image";
+
+const sectionVariants = {
+  hidden: {opacity: 0, y: 100},
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: [0.25, 0.1, 0, 1]
+    }
+  }
+};
+
+const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+    scale: 0.95
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.25, 0.1, 0, 1]
+    }
+  }
+};
 
 export default function Home() {
-
   return (
-    <div className="h-screen w-full bg-[#281c30] relative flex flex-col items-end justify-start antialiased p-8 md:p-12 text-unbounded">
-      <div className="relative z-10 text-lg md:text-7xl p-2 text-right">
-        <Image
-          src="/laneway-logo.png"
-          alt="LanewayHacks"
-          className="relative z-10 text-lg md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 font-sans font-bold"
-          width={700}
-          height={700}
-        />
-      </div>
-      <div className="relative z-10 text-right pr-8">
-        <hr className="border-t-2 border-[#C5B5D9] my-4" />
-        <p className="text-[#D9D5EE] max-w-2xl my-2 text-lg md:text-xl pl-0 md:pl-4 font-unbounded">
-          We will be hosting Melbourne&apos;s largest hackathon for high school students: Laneway Hacks 2025! Student participants will embark on an exhilarating 8-hour journey to create original projects that push the boundaries of their technical skills and creativity.
-        </p>
-        <hr className="border-t-2 border-[#C5B5D9] my-4" />
-        <div className="text-[#B791FF] text-lg md:text-ml font-unbounded font-black">
-          REGISTER YOUR INTEREST
-        </div>
-        <div className="flex justify-end md:justify-end font-unbounded">
-          <EmailSignup />
-        </div>
-      </div>
+    <PageTransition>
+      <main className="relative">
+        <HeroSection/>
 
-      {/* Bottom Left Text */}
-      <div className="relative md:absolute justify-end bottom-8 left-0 md:left-8 flex flex-col z-10 font-unbounded text-right md:text-left mt-16 pt-8 px-8 md:px-0">
-        <div className="text-[#B791FF] text-4xl md:text-6xl font-bold flex items-center md:gap-2 w-full justify-end md:justify-start">
-        <span className="order-2 md:order-1">Q3 2025</span>
-        <PiStarFourFill className="order-1 md:order-2 mr-2"/>
-      </div>
-        <div className="text-[#D9D5EE] text-lg md:text-xl font-medium mt-2">
-          MELBOURNE CBD, AUSTRALIA
-        </div>
-      </div>
+        {/* What Is section */}
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once: true, margin: "-100px"}}
+          variants={sectionVariants}
+          className="min-h-screen bg-[#362741] py-16 md:py-32 relative"
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#281c30]/30"/>
 
-      {/* Vertical Text Pattern */}
-      <div className="fixed right-4 top-0 h-full flex items-center justify-center writing-mode-vertical z-20">
-        <div className="transform rotate-180 whitespace-nowrap tracking-widest text-[#C5B5D9] opacity-80 text-lg font-thin" style={{ writingMode: 'vertical-rl' }}>
-          <span className="flex flex-row items-center gap-2">
-            HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON <PiStarFourFill /> HACKATHON
-          </span>
-        </div>
-      </div>
-      <BackgroundBeams />
-      <Analytics/>
-    </div>
+          <div className="w-full px-4 sm:px-6 lg:px-16 relative">
+            <motion.div
+              variants={sectionVariants}
+              className="flex flex-col items-start mb-8 md:mb-16"
+            >
+              <span className="text-hack-purple text-sm tracking-[0.3em] uppercase mb-4">
+                About the Event
+              </span>
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-hack-white leading-tight max-w-4xl">
+                What is <br className="hidden sm:block"/>Laneway Hacks?
+              </h2>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-6 md:gap-12">
+              <div className="flex flex-col gap-4 md:gap-8">
+                {whatIsContent.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    variants={cardVariants}
+                    transition={{duration: 0.8, delay: 0.2 * index}}
+                    className="group p-6 md:p-8 bg-[#281c30]/50 backdrop-blur-sm border border-[#5B447A]
+                       hover:border-hack-purple transition-all duration-500"
+                  >
+                    <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-hack-purple
+                           group-hover:translate-x-2 transition-transform duration-500">
+                      {item.title}
+                    </h3>
+                    <p className="font-poppins text-base md:text-lg text-hack-white/80 font-light leading-relaxed">
+                      {item.content}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+              <motion.div
+                variants={cardVariants}
+                className="relative h-[300px] md:h-full md:min-h-[600px] rounded-lg overflow-hidden order-first md:order-last"
+              >
+                <Image
+                  src="/images/2.png"
+                  alt="Students collaborating on hardware"
+                  className="object-cover w-full h-full"
+                  width={700}
+                  height={700}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#281c30] via-transparent to-transparent"/>
+              </motion.div>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Why Participate section */}
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once: true, margin: "-100px"}}
+          variants={sectionVariants}
+          className="min-h-screen bg-[#281c30] py-16 md:py-32 relative"
+        >
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-[#362741]/30"/>
+
+          <div className="w-full px-4 sm:px-6 lg:px-16 relative">
+            <motion.div
+              variants={sectionVariants}
+              className="flex flex-col items-start md:items-end text-left md:text-right mb-8 md:mb-16"
+            >
+              <span className="text-hack-purple text-sm tracking-[0.3em] uppercase mb-4">
+                Benefits
+              </span>
+              <h2
+                className="text-4xl sm:text-5xl md:text-7xl font-bold text-hack-white leading-tight max-w-4xl md:ml-auto">
+                Why <br className="hidden sm:block"/>Participate?
+              </h2>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-6 md:gap-12">
+              <motion.div
+                variants={cardVariants}
+                className="relative h-[300px] md:h-full md:min-h-[600px] rounded-lg overflow-hidden order-first"
+              >
+                <Image
+                  src="/images/1.png"
+                  alt="Hackathon participants"
+                  className="object-cover w-full h-full"
+                  width={700}
+                  height={700}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#281c30] via-transparent to-transparent"/>
+              </motion.div>
+              <div className="flex flex-col gap-4 md:gap-8">
+                {whyParticipateContent.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    variants={cardVariants}
+                    transition={{duration: 0.8, delay: 0.2 * index}}
+                    className="group p-6 md:p-8 bg-[#362741]/50 backdrop-blur-sm border border-[#5B447A]
+                       hover:border-hack-purple transition-all duration-500"
+                  >
+                    <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-hack-purple
+                           group-hover:translate-x-2 transition-transform duration-500">
+                      {item.title}
+                    </h3>
+                    <p className="font-poppins text-base md:text-lg text-hack-white/80 font-light leading-relaxed">
+                      {item.content}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* FAQ Section */}
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once: true, margin: "-100px"}}
+          variants={sectionVariants}
+          className="w-full bg-[#281C30] py-24 md:py-40 relative"
+        >
+          <div className="absolute top-0 left-0 right-0 h-32"/>
+          <div className="w-full px-4 sm:px-6 lg:px-16 mb-16 md:mb-24">
+            <motion.div variants={sectionVariants} className="mb-16">
+              <span className="text-hack-purple text-sm tracking-[0.3em] uppercase mb-4 block">
+                Questions & Answers
+              </span>
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-hack-white leading-[0.9] max-w-4xl">
+                Frequently Asked<br className="hidden sm:block"/> Questions
+              </h2>
+            </motion.div>
+          </div>
+          <FAQAccordion/>
+        </motion.section>
+
+        <Footer/>
+      </main>
+    </PageTransition>
   )
 }
+
+const whatIsContent = [
+  {
+    title: "8-Hour Code Party!",
+    content: "An epic day where you and your squad can build the coolest, weirdest tech projects ever! Whether you're just starting out or you code in your sleep, there's space for everyone to create something awesome."
+  },
+  {
+    title: "Melbourne's Biggest Teen Tech Fest",
+    content: "The most massive high school hackathon in all of Melbourne! Join hundreds of other teens taking over the CBD for a day of coding chaos and digital magic."
+  },
+  {
+    title: "Hardware Hacking Heaven",
+    content: "Solder, circuit boards, LEDs, oh my! This is where tech meets art and creativity has no limits. Create whatever artistic masterpiece you can imagine with physical components – the weirder and more wonderful, the better! No idea is too wild for this hardware playground."
+  }
+];
+
+const whyParticipateContent = [
+  {
+    title: "Level Up Your Skills",
+    content: "Learn cool new tech tricks and gain XP in coding, design, and teamwork. Our mentors are like walking cheat codes - they'll help you unlock achievements you never thought possible!"
+  },
+  {
+    title: "Make Friends, Not Just Code",
+    content: "Meet your people! Hang with other teens who get just as excited about tech as you do. From board games to karaoke breaks, this hackathon is one big social adventure."
+  },
+  {
+    title: "Win Epic Loot",
+    content: "Score amazing prizes and bragging rights for your genius creations. We've got tech gadgets, swag, and other cool rewards that'll make your friends wish they came along!"
+  },
+  {
+    title: "Create Your Digital Legacy",
+    content: "Build something that shows off your superpowers to future schools and employers. Plus, you'll have an actual working project to show when your parents ask, 'What do you even do on that computer all day?'"
+  }
+];
