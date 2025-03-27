@@ -29,7 +29,7 @@ const cardVariants = {
     y: 0,
     scale: 1,
     transition: {
-      duration: 0.8,
+      duration: 0.5,
       ease: [0.25, 0.1, 0, 1]
     }
   }
@@ -69,8 +69,10 @@ export default function Home() {
                 {whatIsContent.map((item, index) => (
                   <motion.div
                     key={index}
+                    initial="hidden"
+                    animate="visible"
                     variants={cardVariants}
-                    transition={{duration: 0.8, delay: 0.2 * index}}
+                    transition={{delay: 0.1 * index}}
                     className="group p-6 md:p-8 bg-[#281c30]/50 backdrop-blur-sm border border-[#5B447A]
                        hover:border-hack-purple transition-all duration-500"
                   >
@@ -85,7 +87,10 @@ export default function Home() {
                 ))}
               </div>
               <motion.div
+                initial="hidden"
+                animate="visible"
                 variants={cardVariants}
+                transition={{delay: 0.2}}
                 className="relative h-[300px] md:h-full md:min-h-[600px] rounded-lg overflow-hidden order-first md:order-last"
               >
                 <Image
@@ -127,7 +132,10 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 gap-6 md:gap-12">
               <motion.div
+                initial="hidden"
+                animate="visible"
                 variants={cardVariants}
+                transition={{delay: 0.2}}
                 className="relative h-[300px] md:h-full md:min-h-[600px] rounded-lg overflow-hidden order-first"
               >
                 <Image
@@ -143,8 +151,10 @@ export default function Home() {
                 {whyParticipateContent.map((item, index) => (
                   <motion.div
                     key={index}
+                    initial="hidden"
+                    animate="visible"
                     variants={cardVariants}
-                    transition={{duration: 0.8, delay: 0.2 * index}}
+                    transition={{delay: 0.1 * index}}
                     className="group p-6 md:p-8 bg-[#362741]/50 backdrop-blur-sm border border-[#5B447A]
                        hover:border-hack-purple transition-all duration-500"
                   >

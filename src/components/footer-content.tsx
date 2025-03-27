@@ -27,7 +27,7 @@ const Section2 = () => {
       <h2 className='text-6xl md:text-8xl leading-[0.8] mt-6 md:mt-10 text-[#281C30] break-words max-w-full'>
         Laneway Hacks
       </h2>
-      <span className='text-sm md:text-base text-hack-white'>©-2025</span>
+      <span className='text-sm md:text-base text-hack-white'>©2025</span>
     </div>
   )
 }
