@@ -181,14 +181,16 @@ const FAQAccordion = () => {
                 animate="visible"
                 exit="hidden"
                 variants={contentVariants}
-                className="px-4 pb-6 pl-12 overflow-hidden"
+                className="px-4 pl-12"
               >
                 <motion.p
-                  className="font-poppins text-[#D9D5EE] opacity-80 pt-6"
-                  initial={{opacity: 0, y: 10}}
+                  className="font-poppins text-[#D9D5EE] opacity-80"
+                  initial={{opacity: 0, y: 10, paddingTop: "1.5rem", paddingBottom: "1.5rem"}}
                   animate={{
                     opacity: 0.8,
                     y: 0,
+                    paddingTop: "1.5rem",
+                    paddingBottom: "1.5rem",
                     transition: {delay: 0.1, duration: 0.3}
                   }}
                   exit={{opacity: 0, transition: {duration: 0.2}}}
