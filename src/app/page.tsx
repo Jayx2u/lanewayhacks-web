@@ -229,7 +229,7 @@ const whyParticipateContent = [
   },
   {
     title: "Win Epic Loot",
-    content: "Show off your skills and earn amazing rewards (and bragging rights)! From cutting-edge tech gadgets to cool swag, your friends will wish they came along!"
+    content: "Show off your skills and earn amazing rewards! (and bragging rights) From cutting-edge tech gadgets to cool swag, your friends will wish they came along!"
   },
   {
     title: "Create Your Digital Legacy",
