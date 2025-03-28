@@ -1,10 +1,12 @@
 "use client"
+
 import {motion} from "framer-motion"
 import PageTransition from "@/src/components/animations/page-transition"
 import HeroSection from "@/src/components/sections/hero-section"
 import FAQAccordion from '@/src/components/sections/faq'
 import Footer from "@/src/components/sections/footer"
 import Image from "next/image";
+
 
 const sectionVariants = {
   hidden: {opacity: 0, y: 100},
@@ -34,6 +36,7 @@ const cardVariants = {
     }
   }
 };
+
 
 export default function Home() {
   return (
@@ -202,34 +205,34 @@ export default function Home() {
 
 const whatIsContent = [
   {
-    title: "8-Hour Code Party!",
-    content: "An epic day where you and your squad can build the coolest, weirdest tech projects ever! Whether you're just starting out or you code in your sleep, there's space for everyone to create something awesome."
+    title: "8 Hour Code Party!",
+    content: "A full day of creativity and coding where you and your squad can bring your wildest tech ideas to life! Whether you're just starting or you're already a coding pro, there's room for everyone to dive in and create something unforgettable."
   },
   {
-    title: "Melbourne's Biggest Teen Tech Fest",
-    content: "The most massive high school hackathon in all of Melbourne! Join hundreds of other teens taking over the CBD for a day of coding chaos and digital magic."
+    title: "Melbourne's Largest Teen Tech Fest",
+    content: "Join hundreds of fellow teens at Melbourne's largest high school hackathon, right in the heart of the CBD! It’s a day full of energy, coding, and digital creativity all powered by young minds pushing the boundaries of tech."
   },
   {
     title: "Hardware Hacking Heaven",
-    content: "Solder, circuit boards, LEDs, oh my! This is where tech meets art and creativity has no limits. Create whatever artistic masterpiece you can imagine with physical components – the weirder and more wonderful, the better! No idea is too wild for this hardware playground."
+    content: "Bring your ideas to life with soldering, circuit boards, and everything in between! If you can dream it, you can build it – no idea is too wacky or out-there."
   }
 ];
 
 const whyParticipateContent = [
   {
-    title: "Level Up Your Skills",
-    content: "Learn cool new tech tricks and gain XP in coding, design, and teamwork. Our mentors are like walking cheat codes - they'll help you unlock achievements you never thought possible!"
+    title: "Level Up Your Skills!",
+    content: "Pick up new coding tricks, design hacks, and teamwork tactics. Our expert mentors are your cheat codes - they'll help you unlock achievements you never thought possible!"
   },
   {
     title: "Make Friends, Not Just Code",
-    content: "Meet your people! Hang with other teens who get just as excited about tech as you do. From board games to karaoke breaks, this hackathon is one big social adventure."
+    content: "Meet your people! Connect with other teens who get just as excited about tech as you are. Between coding challenges, board games to karaoke breaks, the fun doesn't stop when the project does."
   },
   {
     title: "Win Epic Loot",
-    content: "Score amazing prizes and bragging rights for your genius creations. We've got tech gadgets, swag, and other cool rewards that'll make your friends wish they came along!"
+    content: "Show off your skills and earn amazing rewards (and bragging rights)! From cutting-edge tech gadgets to cool swag, your friends will wish they came along!"
   },
   {
     title: "Create Your Digital Legacy",
-    content: "Build something that shows off your superpowers to future schools and employers. Plus, you'll have an actual working project to show when your parents ask, 'What do you even do on that computer all day?'"
+    content: "Build a project that you can show off to future schools and employers! Plus, you'll have an actual working project to show when your parents ask, \"What do you even do on that computer all day?\""
   }
 ];
