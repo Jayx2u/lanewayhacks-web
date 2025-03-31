@@ -105,8 +105,9 @@ export default function HeroSection() {
         </motion.div>*/}
       </div>
 
+      {/* Bottom Left Info */}
       <div
-        className="relative w-full md:absolute md:bottom-8 md:left-8 flex flex-col z-10 font-unbounded text-right md:text-left mt-16 pt-8 px-4 md:px-0">
+        className="relative w-fit md:absolute md:bottom-8 md:left-8 flex flex-col z-10 font-unbounded text-right md:text-left mt-16 pt-8 px-4 md:px-0">
         <div
           className="text-hack-purple text-3xl md:text-4xl lg:text-6xl font-bold flex items-center gap-2 w-full justify-end md:justify-start">
           <MaskedText
