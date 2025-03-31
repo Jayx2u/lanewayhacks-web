@@ -184,7 +184,7 @@ export default function Home() {
           className="w-full bg-[#281C30] py-24 md:py-40 relative"
         >
           <div className="absolute top-0 left-0 right-0 h-32"/>
-          <div className="w-full px-4 sm:px-6 lg:px-16 mb-16 md:mb-24">
+          <div className="w-full px-4 sm:px-6 lg:px-16 relative">
             <motion.div variants={sectionVariants} className="mb-16">
               <span className="text-hack-purple text-sm tracking-[0.3em] uppercase mb-4 block">
                 Questions & Answers
@@ -194,7 +194,9 @@ export default function Home() {
               </h2>
             </motion.div>
           </div>
-          <FAQAccordion/>
+          <div className="w-full px-4 sm:px-6 lg:px-16">
+            <FAQAccordion/>
+          </div>
         </motion.section>
 
         <Footer/>
@@ -210,7 +212,7 @@ const whatIsContent = [
   },
   {
     title: "Melbourne's Largest Teen Tech Fest",
-    content: "Join hundreds of fellow teens at Melbourne's largest high school hackathon, right in the heart of the CBD! It’s a day full of energy, coding, and digital creativity all powered by young minds pushing the boundaries of tech."
+    content: "Join hundreds of fellow teens at Melbourne's largest high school hackathon, right in the heart of the CBD! It's a day full of energy, coding, and digital creativity all powered by young minds pushing the boundaries of tech."
   },
   {
     title: "Hardware Hacking Heaven",

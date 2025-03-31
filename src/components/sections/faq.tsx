@@ -83,7 +83,7 @@ const FAQAccordion = () => {
     {
       id: '05',
       question: "What Kind Of Projects Can I Build?",
-      answer: "Anything you can imagine! From websites and apps to hardware hacks and games. We encourage creative, weird, and wonderful ideas that solve problems or just make people smile."
+      answer: "You'll be given a theme at the event to follow! You can build anything you want as long as it's related to the theme."
     },
     {
       id: '06',
