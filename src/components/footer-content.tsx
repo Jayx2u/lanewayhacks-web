@@ -1,6 +1,7 @@
 import React from 'react'
 import MaskedText from '@/src/components/animations/masked-text'
 import Link from 'next/link'
+import {FaGithub, FaInstagram, FaLinkedin} from 'react-icons/fa'
 
 export default function Content() {
   return (
