@@ -1,7 +1,6 @@
 import React from 'react'
 import MaskedText from '@/src/components/animations/masked-text'
 import Link from 'next/link'
-import {FaGithub, FaInstagram, FaLinkedin, FaTwitter} from 'react-icons/fa'
 
 export default function Content() {
   return (
@@ -57,7 +56,6 @@ const Socials = () => {
       <div className='flex flex-col gap-4'>
         <div className='flex gap-4 md:justify-end'>
           <SocialLink href="https://github.com/lanewayhacks" icon={<FaGithub size={24}/>}/>
-          <SocialLink href="https://twitter.com/lanewayhacks" icon={<FaTwitter size={24}/>}/>
           <SocialLink href="https://linkedin.com/company/lanewayhacks" icon={<FaLinkedin size={24}/>}/>
           <SocialLink href="https://instagram.com/lanewayhacks" icon={<FaInstagram size={24}/>}/>
         </div>
